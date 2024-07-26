@@ -93,7 +93,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/POS.png"
+                      src="./POS.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -127,7 +127,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className=" no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center ">
                     <img
-                      src="/quicktrack.png"
+                      src="./quicktrack.png"
                       width={400}
                       height={225}
                       alt="Project 2"
@@ -160,7 +160,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className=" no-selectflex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/LSPU.jpg"
+                      src="./LSPU.jpg"
                       width={400}
                       height={225}
                       alt="Project 3"
@@ -197,7 +197,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/LSPU2.png"
+                      src="./LSPU2.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -233,7 +233,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/cashiering.png"
+                      src="./cashiering.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -269,7 +269,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/tictactoe.png"
+                      src="./tictactoe.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -321,7 +321,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center no-select">
                     <img
-                      src="/sumobot.png"
+                      src="./sumobot.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -359,7 +359,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/smartfan.jpg"
+                      src="./smartfan.jpg"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -396,7 +396,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/ROBOT.jpg"
+                      src="./ROBOT.jpg"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -442,7 +442,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/watervending.png"
+                      src="./watervending.png"
                       width={400}
                       height={225}
                       alt="Project 1"
