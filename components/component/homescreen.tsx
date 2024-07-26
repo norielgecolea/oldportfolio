@@ -43,7 +43,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
               <div className="flex items-center justify-center emphasis-animation ">
                 <div className="circle-container">
                   <img
-                    src='/me.jpg'
+                    src='./me.jpg'
                     width={300}
                     height={300}
                     alt="John Doe"
