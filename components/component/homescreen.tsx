@@ -43,7 +43,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
               <div className="flex items-center justify-center emphasis-animation ">
                 <div className="circle-container">
                   <img
-                    src='/me.jpg'
+                    src='./me.jpg'
                     width={300}
                     height={300}
                     alt="John Doe"
@@ -93,7 +93,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/POS.png"
+                      src="./POS.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -127,7 +127,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className=" no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center ">
                     <img
-                      src="/quicktrack.png"
+                      src="./quicktrack.png"
                       width={400}
                       height={225}
                       alt="Project 2"
@@ -160,7 +160,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className=" no-selectflex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/LSPU.jpg"
+                      src="./LSPU.jpg"
                       width={400}
                       height={225}
                       alt="Project 3"
@@ -197,7 +197,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/LSPU2.png"
+                      src="./LSPU2.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -233,7 +233,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/cashiering.png"
+                      src="./cashiering.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -243,7 +243,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                   <CardContent className="space-y-2">
                     <h3 className="text-xl font-bold no-select">Cashiering System Project</h3>
                     <p className="text-muted-foreground no-select">
-                      Jerlibee's cashiering system is designed for efficiency and user-friendliness, featuring an intuitive interface for seamless ordering. The system highlights the brand's fresh and juicy chicken meals, perfectly
+                      Jerlibee&apos;s cashiering system is designed for efficiency and user-friendliness, featuring an intuitive interface for seamless ordering. The system highlights the brand&apos;s fresh and juicy chicken meals, perfectly
                       paired with mouth-watering sides. Customers can easily navigate through the menu,
                       view their cart, and complete orders, ensuring a satisfying experience from start
                       to finish.
@@ -269,7 +269,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/tictactoe.png"
+                      src="./tictactoe.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -321,7 +321,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center no-select">
                     <img
-                      src="/sumobot.png"
+                      src="./sumobot.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -359,7 +359,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/smartfan.jpg"
+                      src="./smartfan.jpg"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -396,7 +396,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/ROBOT.jpg"
+                      src="./ROBOT.jpg"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -442,7 +442,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <img
-                      src="/watervending.png"
+                      src="./watervending.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -455,7 +455,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                       The Coin Base Water Refilling System is an automated water dispensing
                       unit designed using Arduino. It allows users to refill their water
                       containers by inserting a coin into the machine.
-                      The Arduino microcontroller manages the system's operations,
+                      The Arduino microcontroller manages the systems operations,
                       including coin validation, water dispensing. When a valid coin is detected, the Arduino activates
                       a water pump to dispense the required amount of water. This system
                       ensures a convenient and efficient refilling process, with an emphasis
@@ -522,7 +522,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
             <div className="space-y-8">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold">Skills</h2>
-                <p className="text-muted-foreground">Here are some of the technologies I'm proficient in.</p>
+                <p className="text-muted-foreground">Here are some of the technologies Im proficient in.</p>
               </div>
               <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
                 <div className="space-y-2">
@@ -629,7 +629,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
 
 
 export default Homescreen;
-function ArrowRightIcon(props) {
+function ArrowRightIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -650,7 +650,7 @@ function ArrowRightIcon(props) {
 }
 
 
-function CodeIcon(props) {
+function CodeIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -671,7 +671,7 @@ function CodeIcon(props) {
 }
 
 
-function DatabaseIcon(props) {
+function DatabaseIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -693,7 +693,7 @@ function DatabaseIcon(props) {
 }
 
 
-function DownloadIcon(props) {
+function DownloadIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -713,7 +713,7 @@ function DownloadIcon(props) {
     </svg>
   )
 }
-function FacebookIcon(props) {
+function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -733,7 +733,7 @@ function FacebookIcon(props) {
 }
 
 
-function GithubIcon(props) {
+function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -753,7 +753,7 @@ function GithubIcon(props) {
   )
 }
 
-function InstagramIcon(props) {
+function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -773,7 +773,7 @@ function InstagramIcon(props) {
     </svg>
   );
 }
-function ThreadsLogo(props) {
+function ThreadsLogo(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -794,7 +794,7 @@ function ThreadsLogo(props) {
 
 
 
-function LinkedinIcon(props) {
+function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -816,7 +816,7 @@ function LinkedinIcon(props) {
 }
 
 
-function PenToolIcon(props) {
+function PenToolIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -839,7 +839,7 @@ function PenToolIcon(props) {
 }
 
 
-function ServerIcon(props) {
+function ServerIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -862,7 +862,7 @@ function ServerIcon(props) {
 }
 
 
-function TwitterIcon(props) {
+function TwitterIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -882,7 +882,7 @@ function TwitterIcon(props) {
 }
 
 
-function XIcon(props) {
+function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

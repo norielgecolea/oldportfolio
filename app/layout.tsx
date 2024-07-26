@@ -1,6 +1,7 @@
 // This is the root layout component for your Next.js app.
 // Learn more: https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required
 import { Manrope } from 'next/font/google'
+import { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 import './globals.css'
 
@@ -15,10 +16,12 @@ const fontBody = Manrope({
   display: 'swap',
   variable: '--font-body',
 })
-
-export default function Layout({ children }) {
+interface LayoutProps {
+  children: ReactNode
+}
+export default function Layout({ children }: LayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en">  
       <body 
         className={cn(
           'antialiased',
@@ -26,16 +29,7 @@ export default function Layout({ children }) {
           fontBody.variable
         )}
       >
-
-
-
-
-
-
-
-
-
-        
+     
         {children}
       </body>
     </html>

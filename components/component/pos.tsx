@@ -17,7 +17,9 @@ function POSPage({ setCurrentView }: POSPageProps) {
     window.scrollTo(0, 0);
 }, []);
   const router = useRouter();
-
+function scrolltop(){
+  window.scrollTo(0, 0);
+}
   const handleRedirect = () => {
     router.push('/posss');
   };
@@ -127,7 +129,7 @@ function POSPage({ setCurrentView }: POSPageProps) {
             <div className="space-y-8">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold">Skills</h2>
-                <p className="text-muted-foreground">Here are some of the technologies I'm proficient in.</p>
+                <p className="text-muted-foreground">Here are some of the technologies I&apos;m proficient in.</p>
               </div>
               <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
                 <div className="space-y-2">
@@ -234,7 +236,7 @@ function POSPage({ setCurrentView }: POSPageProps) {
 
 
 export default POSPage;
-function ArrowRightIcon(props) {
+function ArrowRightIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -255,7 +257,7 @@ function ArrowRightIcon(props) {
 }
 
 
-function CodeIcon(props) {
+function CodeIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -276,7 +278,7 @@ function CodeIcon(props) {
 }
 
 
-function DatabaseIcon(props) {
+function DatabaseIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -298,7 +300,7 @@ function DatabaseIcon(props) {
 }
 
 
-function DownloadIcon(props) {
+function DownloadIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -318,7 +320,7 @@ function DownloadIcon(props) {
     </svg>
   )
 }
-function FacebookIcon(props) {
+function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -338,7 +340,7 @@ function FacebookIcon(props) {
 }
 
 
-function GithubIcon(props) {
+function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -358,7 +360,7 @@ function GithubIcon(props) {
   )
 }
 
-function InstagramIcon(props) {
+function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -378,7 +380,7 @@ function InstagramIcon(props) {
     </svg>
   );
 }
-function ThreadsLogo(props) {
+function ThreadsLogo(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -399,7 +401,7 @@ function ThreadsLogo(props) {
 
 
 
-function LinkedinIcon(props) {
+function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -421,7 +423,7 @@ function LinkedinIcon(props) {
 }
 
 
-function PenToolIcon(props) {
+function PenToolIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -444,7 +446,7 @@ function PenToolIcon(props) {
 }
 
 
-function ServerIcon(props) {
+function ServerIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -467,7 +469,7 @@ function ServerIcon(props) {
 }
 
 
-function TwitterIcon(props) {
+function TwitterIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -487,7 +489,7 @@ function TwitterIcon(props) {
 }
 
 
-function XIcon(props) {
+function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
