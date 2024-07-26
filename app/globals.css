@@ -1,0 +1,315 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 200 20% 50%;
+    /* Lighter background */
+    --foreground: 210 30% 20%;
+    /* Darker text for readability */
+    --primary: 210 40% 25%;
+    /* Deep blue */
+    --primary-foreground: 200 20% 90%;
+    /* Light text for primary color */
+    --secondary: 200 40% 35%;
+    /* Medium blue */
+    --secondary-foreground: 200 20% 90%;
+    /* Light text for secondary color */
+    --accent: 200 30% 50%;
+    /* Slightly lighter accent color */
+    --accent-foreground: 200 20% 90%;
+    /* Light text for accent color */
+    --destructive: 0 60% 50%;
+    /* Soft red for destructive actions */
+    --destructive-foreground: 200 20% 90%;
+    /* Light text for destructive actions */
+    --muted: 200 20% 80%;
+    /* Very light gray */
+    --muted-foreground: 200 20% 30%;
+    /* Darker text for muted color */
+    --card: 200 20% 70%;
+    /* Medium blue card color */
+    --card-foreground: 200 20% 90%;
+    /* Light text for card */
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 20% 20%;
+    /* Darker popover foreground */
+    --border: 700 40% 90%;
+    /* Light border color */
+    --input: 200 20% 60%;
+    /* Medium input color */
+    --ring: 200 20% 70%;
+    /* Medium ring color */
+    --radius: 1rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* Define the keyframes for the wiggle animation */
+/* Define the keyframes for the wiggle animation */
+@keyframes wiggle {
+    0%, 20%, 100% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(-5deg);
+    }
+    15% {
+        transform: rotate(5deg);
+    }
+    20% {
+      transform: rotate(-5deg);
+  }
+  25% {
+      transform: rotate(5deg);
+  }
+  30% {
+    transform: rotate(-5deg);
+}
+35% {
+    transform: rotate(5deg);
+}
+35% {
+  transform: rotate(0deg);
+}
+
+    
+}
+
+/* Apply the wiggle animation on hover */
+.wiggle:hover {
+    animation: wiggle 1s ease-in-out infinite;
+    display: inline-block; /* Ensure element behaves correctly with rotation */
+}
+
+.bg-card {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+
+  /* Title bar styling */
+  .card-header {
+    @apply bg-primary text-primary-foreground;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn .5s ease-out;
+}
+
+
+@keyframes fadeIn1 {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in1 {
+  animation: fadeIn1 1s ease-out;
+}
+
+
+
+@keyframes spin3d {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.spin-onload {
+  animation: spin3d 2s ease-out;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+
+.typing-container {
+  display: inline-block;
+  overflow: hidden;
+  /* Ensures text is hidden until animated */
+  white-space: nowrap;
+  border-right: 10px solid black;
+  /* Cursor */
+  animation: typing 5s steps(40, end) 1s 1 normal both, blink 500ms steps(40, end) infinite;
+}
+
+/* To ensure the text container aligns with the text length */
+.typing-container>* {
+  display: inline;
+  white-space: pre;
+  /* Preserves whitespace and line breaks */
+}
+
+.no-select {
+  user-select: none;
+}
+
+
+@keyframes emphasis {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  25% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+
+  75% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 3s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {}
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.emphasis-animation {
+  animation: emphasis 5s infinite;
+}
+
+.circle-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.circle-container::before {
+  content: '';
+  position: absolute;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border: 10px dotted rgb(102, 136, 153);
+  border-radius: 100%;
+  box-sizing: border-box;
+  animation: rotate 4s cubic-bezier(0.5, 0.05, 0.5, 0.85) infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 9px;
+  height: 1.2em;
+  background-color: rgb(0, 0, 0);
+  animation: blink 1s step-start infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Assuming you have utility classes for colors and other properties from a framework like TailwindCSS */
+
+/* Group hover to change the icon's position and color */
+/* Assuming you have utility classes for colors and other properties from a framework like TailwindCSS */
+
+/* Group hover to change the text and icon colors and positions */
