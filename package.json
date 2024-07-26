@@ -1,14 +1,10 @@
 {
-  "homepage": "https://norielgecolea.github.io/portfolio/",
   "name": "digitalportfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "predeploy": "npm run build && npm run export",
     "build": "next build",
-    "export": "next export",
-    "deploy": "npm run predeploy && gh-pages -d build",
     "start": "next start",
     "lint": "next lint"
   },

@@ -52,7 +52,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                 </div>
               </div>
               <div className="space-y-4">
-                <h1 className="text-3xl font-bold  no-select">Engr. Noriel Fernando D. Gecolea <span className="cursor"></span></h1>
+                <h1 className="text-3xl font-bold  no-select">Engr. Noriel Fernando Gecolea <span className="cursor"></span></h1>
                 <p className="text-lg text-muted-foreground no-select">
                   I am a computer engineering graduate with a passion for programming and
                   building innovative, user-friendly applications. With experience in a
