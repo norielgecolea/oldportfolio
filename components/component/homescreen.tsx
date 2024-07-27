@@ -8,21 +8,43 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import meImage from '@/components/component/image/me.jpg';
-import { useState, useEffect } from 'react';
-
+import React, { useState, useEffect , useRef} from 'react';
 
 
 
 
 interface HomescreenProps {
-  setCurrentView: React.Dispatch<React.SetStateAction<string>>;
+  currentView: string;
+  setCurrentView: (view: string) => void; // Add this to update view
 }
 
-function Homescreen({ setCurrentView }: HomescreenProps) {
+function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
+  
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const projectRef = useRef<HTMLDivElement>(null);
+  const skillRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
-  }, []);
+
+    // Scroll to the 'about' section if the current view is 'about'
+    if (currentView === 'about' && aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    else if(currentView === 'projects' && projectRef.current){
+      projectRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    else if(currentView === 'skills' && skillRef.current){
+      skillRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    else if(currentView === 'contact' && contactRef.current){
+      contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [currentView]);
+
+ 
   const router = useRouter();
 
   const handleRedirect = () => {
@@ -41,7 +63,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
 
 
       <main className="flex-1">
-        <section id="about" className="bg-muted py-20 fade-in ">
+        <section ref={aboutRef} id="about" className="bg-muted py-20 fade-in ">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div className="flex items-center justify-center emphasis-animation ">
@@ -88,7 +110,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
           </div>
         </section>
 
-        <section id="projects" className="py-20 fade-in1">
+        <section ref={projectRef} id="projects" className="py-20 fade-in1">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="space-y-8">
               <div className="space-y-2">
@@ -121,7 +143,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                    <button onClick={() => setCurrentView('about')}
+                  <button onClick={() => setCurrentView('pos')}
                       className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 
                     >
@@ -523,7 +545,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
             </div>
           </div>
         </section>
-        <section id="skills" className="bg-muted py-20">
+        <section ref={skillRef} id="skills" className="bg-muted py-20">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="space-y-8">
               <div className="space-y-2">
@@ -574,7 +596,7 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
             </div>
           </div>
         </section>
-        <section id="contact" className="py-20">
+        <section ref={contactRef}id="contact" className="py-20">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="space-y-8">
               <div className="space-y-2">

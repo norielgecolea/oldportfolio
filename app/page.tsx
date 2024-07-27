@@ -20,15 +20,15 @@ export default function Home() {
   function renderComponent(view: string) {
     switch (view) {
       case 'home':
-        return <Homescreen setCurrentView={setCurrentView} />;
+        return <Homescreen currentView={currentView} setCurrentView={setCurrentView} />;
       case 'about':
-        return <POSPage setCurrentView={setCurrentView} />;
-      // Add more cases as needed
+        return <Homescreen currentView={currentView} setCurrentView={setCurrentView} />;
+      case 'pos':
+        return <POSPage currentView={currentView} setCurrentView={setCurrentView} />;
       default:
-        return <Homescreen setCurrentView={setCurrentView} />;
+        return <Homescreen currentView={currentView} setCurrentView={setCurrentView} />;
     }
   }
-
   return (
 
     <div className="flex min-h-[100dvh] flex-col bg-background text-foreground">

@@ -8,10 +8,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 interface POSPageProps {
-  setCurrentView: React.Dispatch<React.SetStateAction<string>>;
+  currentView: string;
 }
 
-function POSPage({ setCurrentView }: POSPageProps) {
+function POSPage({ currentView }: POSPageProps) {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
