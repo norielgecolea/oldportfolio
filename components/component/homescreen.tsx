@@ -10,6 +10,10 @@ import { Button } from "@/components/ui/button";
 import meImage from '@/components/component/image/me.jpg';
 import { useState, useEffect } from 'react';
 
+
+
+
+
 interface HomescreenProps {
   setCurrentView: React.Dispatch<React.SetStateAction<string>>;
 }

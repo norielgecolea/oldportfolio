@@ -4,13 +4,18 @@ import { Manrope } from 'next/font/google'
 import { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 import './globals.css'
+import Head from 'next/head'
 
 const fontHeading = Manrope({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-heading',
 })
+export const metadata = {
+  title: "Noriel Gecolea",
+  
 
+};
 const fontBody = Manrope({
   subsets: ['latin'],
   display: 'swap',
@@ -22,6 +27,9 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <html lang="en">  
+    <Head>
+        <title>Noriel Gecolea</title>
+      </Head>
       <body 
         className={cn(
           'antialiased',

@@ -30,9 +30,9 @@ export default function Home() {
   }
 
   return (
- 
+
     <div className="flex min-h-[100dvh] flex-col bg-background text-foreground">
-         <Head>
+      <Head>
         <title>Noriel Gecolea</title>
       </Head>
       <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm">
