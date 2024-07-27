@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Homescreen from '@/components/component/homescreen';
 import POSPage from '@/components/component/pos';
+import Head from 'next/head'
 
 export default function Home() {
   const [currentView, setCurrentView] = useState('home');
@@ -29,7 +30,11 @@ export default function Home() {
   }
 
   return (
+ 
     <div className="flex min-h-[100dvh] flex-col bg-background text-foreground">
+         <Head>
+        <title>Noriel Gecolea</title>
+      </Head>
       <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <button onClick={homeclick} className="flex items-center gap-2">
