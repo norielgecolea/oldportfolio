@@ -1156,35 +1156,7 @@ html {
   animation: emphasis 5s infinite;
 }
 
-.circle-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 20px;
-  padding-left: 20px;
-}
 
-.circle-container::before {
-  content: '';
-  position: absolute;
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
-  border: 10px dotted rgb(102, 136, 153);
-  border-radius: 100%;
-  box-sizing: border-box;
-  animation: rotate 4s cubic-bezier(0.5, 0.05, 0.5, 0.85) infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .cursor {
   display: inline-block;
@@ -1216,6 +1188,49 @@ html {
 /* Assuming you have utility classes for colors and other properties from a framework like TailwindCSS */
 
 /* Group hover to change the text and icon colors and positions */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+.circle-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.circle-container::before {
+  content: '';
+  position: absolute;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border: 10px dotted rgb(102, 136, 153);
+  border-radius: 100%;
+  box-sizing: border-box;
+  animation: rotate 4s cubic-bezier(0.5, 0.05, 0.5, 0.85) infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
@@ -1310,4 +1325,3 @@ html {
     padding-right: 2rem;
   }
 }
-

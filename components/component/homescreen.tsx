@@ -45,14 +45,16 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div className="flex items-center justify-center emphasis-animation ">
-                <div className="circle-container">
+                <div className="circle-container  ">
+                  <div className="">
                   <img
-                    src='./me.jpg'
+                    src='./me.png'
                     width={300}
                     height={300}
                     alt="John Doe"
-                    className="h-64 w-64 rounded-full object-cover spin-onload  "
+                    className="h-64 w-64 rounded-full object-cover fade-in-up   "
                   />
+                  </div>
                 </div>
               </div>
               <div className="space-y-4">
