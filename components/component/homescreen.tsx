@@ -601,28 +601,31 @@ function Homescreen({ setCurrentView }: HomescreenProps) {
         </section>
       </main>
       <footer className="bg-muted py-8">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <CodeIcon className="h-6 w-6" />
-              <span className="font-bold">Noriel Fernando Gecolea</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <Link href="https://www.linkedin.com/in/norielgecolea/" className=" text-muted-foreground hover:text-primary" prefetch={false}>
-                <LinkedinIcon className="h-6 w-6 wiggle" />
-              </Link>
-              <Link href="https://www.instagram.com/norrsss__/" className="text-muted-foreground hover:text-primary" prefetch={false}>
-                <InstagramIcon className="h-6 w-6 wiggle" />
-              </Link>
-
-              <Link href="https://www.facebook.com/NorielGecolea/" className="text-muted-foreground hover:text-primary" prefetch={false}>
-                <FacebookIcon className="h-6 w-6 wiggle" />
-              </Link>
-
-            </div>
-          </div>
+  <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-between">
+      <div className="flex items-center gap-2">
+        <CodeIcon className="h-6 w-6" />
+        <div>
+          <span className="font-bold">Noriel Fernando Gecolea</span>
+          
         </div>
-      </footer>
+      </div>
+      <div className="text-sm text-muted-foreground">© NORIELGECOLEA 2024 - 2025</div>
+      <div className="flex items-center gap-4">
+        <Link href="https://www.linkedin.com/in/norielgecolea/" className="text-muted-foreground hover:text-primary" prefetch={false}>
+          <LinkedinIcon className="h-6 w-6 wiggle" />
+        </Link>
+        <Link href="https://www.instagram.com/norrsss__/" className="text-muted-foreground hover:text-primary" prefetch={false}>
+          <InstagramIcon className="h-6 w-6 wiggle" />
+        </Link>
+        <Link href="https://www.facebook.com/NorielGecolea/" className="text-muted-foreground hover:text-primary" prefetch={false}>
+          <FacebookIcon className="h-6 w-6 wiggle" />
+        </Link>
+      </div>
+    </div>
+  </div>
+</footer>
+
     </div>
   )
 }
