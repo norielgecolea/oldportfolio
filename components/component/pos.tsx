@@ -8,10 +8,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 interface POSPageProps {
-  currentView: string;
+  
+  setCurrentView: (view: string) => void; // Add this to update view
 }
 
-function POSPage({ currentView }: POSPageProps) {
+function POSPage({setCurrentView }: POSPageProps) {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);

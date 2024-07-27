@@ -24,7 +24,7 @@ export default function Home() {
       case 'about':
         return <Homescreen currentView={currentView} setCurrentView={setCurrentView} />;
       case 'pos':
-        return <POSPage currentView={currentView} setCurrentView={setCurrentView} />;
+        return <POSPage setCurrentView={setCurrentView} />;
       default:
         return <Homescreen currentView={currentView} setCurrentView={setCurrentView} />;
     }
