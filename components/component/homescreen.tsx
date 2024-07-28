@@ -80,13 +80,20 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 </div>
               </div>
               <div className="space-y-4">
-                <h1 className="text-3xl font-bold  no-select">Noriel Fernando Gecolea CPE <span className="cursor"></span></h1>
+             
+                <h1 className="text-5xl font-bold  no-select"><p className="text-lg text-muted-foreground no-select">Hi, my name is </p>Noriel Fernando Gecolea <span className="cursor"></span></h1>
                 <p className="text-lg text-muted-foreground no-select">
-                  I am a graduating computer engineering student with a passion for programming and
+
+                I am a graduating computer engineering student with a passion for programming and
                   building innovative, user-friendly applications. With experience in a
                   variety of technologies, I am always eager to expand my knowledge and
                   skills. Additionally, I enjoy music production and working on electronics
                   projects in my spare time.
+
+
+
+
+
                 </p>
                 <div className="flex gap-4">
                   <Link
@@ -481,7 +488,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     <h3 className="text-xl font-bold no-select">Coin Base Water Refilling System</h3>
                     <p className="text-muted-foreground no-select">
                       The Coin Base Water Refilling System is an automated water dispensing
-                      unit designed using Arduino. It allows users to refill their water
+                      unit designed using Arduino. It allows users v  to refill their water
                       containers by inserting a coin into the machine.
                       The Arduino microcontroller manages the systems operations,
                       including coin validation, water dispensing. When a valid coin is detected, the Arduino activates
@@ -548,10 +555,16 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
         <section ref={skillRef} id="skills" className="bg-muted py-20">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="space-y-8">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold">Skills</h2>
-                <p className="text-muted-foreground">Here are some of the technologies Im proficient in.</p>
+              <div className="space-y-2 text-center">
+                <h2 className="text-3xl font-bold">About Me</h2>
+                <p className="text-muted-foreground">I am a graduating computer engineering student with a passion for programming and
+                  building innovative, user-friendly applications. With experience in a
+                  variety of technologies, I am always eager to expand my knowledge and
+                  skills. Additionally, I enjoy music production and working on electronics
+                  projects in my spare time.</p>
               </div>
+
+              <h2 className="text-1xl text-center font-bold">Here are Some of My Skills</h2>
               <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
                 <div className="space-y-2">
                   <CodeIcon className="h-8 w-8 text-primary" />
