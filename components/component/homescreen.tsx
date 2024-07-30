@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import meImage from '@/components/component/image/me.jpg';
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 interface FullScreenImageModalProps {
   src: string;
   isOpen: boolean;
@@ -85,21 +86,21 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
   };
 
   const cardData = [
-    { src: "./certs/Coursera Bulding a Calculator-1.png", title: "Building a Calculator" },
-    { src: "./certs/csnet.png", title: "C# for .NET Developers" },
-    { src: "./certs/Coursera C++ Data Structures-1.png", title: "C++ Data Structures" },
-    { src: "./certs/Coursera Crash Course on Python-1.png", title: "Crash Course on Python" },
-    { src: "./certs/Coursera Foundation of Computer Science-1.png", title: "Foundation of Computer Science" },
-    { src: "./certs/Coursera Foundation of User Experience Design-1.png", title: "Foundation of User Experience Design" },
-    { src: "./certs/Coursera Introduction to Iot-1.png", title: "Introduction to Iot" },
-    { src: "./certs/Coursera Introduction to visual basic programming-1.png", title: "Introduction to Visual Basic Programming" },
-    { src: "./certs/Coursera Technical Support Fundamental-1.png", title: "Technical Support Fundamental Google" },
-    { src: "./certs/Coursera Technical Support IBM-1.png", title: "Technical Support IBM" },
-    { src: "./certs/ENGINEER TAYO WEBINAR-1.png", title: "ENGINEER TAYO WEBINAR" },
-    { src: "./certs/Communicati-certificate-1.png", title: "Networking Essentials CISCO" },
-    { src: "./certs/Intro to Packet -certificate-1.png", title: "Introduction to Packet Tracer" },
-    { src: "./certs/ISITE NATIONAL COMPETITION WEBINAR.jpg", title: "ISITE NATIONAL COMPETITION" },
-    { src: "./certs/LYCO WEBINAR.png", title: "\"The Journey from Code to Career\"" }
+    { src: "/certs/Coursera Bulding a Calculator-1.png", title: "Building a Calculator" },
+    { src: "/certs/csnet.png", title: "C# for .NET Developers" },
+    { src: "/certs/Coursera C++ Data Structures-1.png", title: "C++ Data Structures" },
+    { src: "/certs/Coursera Crash Course on Python-1.png", title: "Crash Course on Python" },
+    { src: "/certs/Coursera Foundation of Computer Science-1.png", title: "Foundation of Computer Science" },
+    { src: "/certs/Coursera Foundation of User Experience Design-1.png", title: "Foundation of User Experience Design" },
+    { src: "/certs/Coursera Introduction to Iot-1.png", title: "Introduction to Iot" },
+    { src: "/certs/Coursera Introduction to visual basic programming-1.png", title: "Introduction to Visual Basic Programming" },
+    { src: "/certs/Coursera Technical Support Fundamental-1.png", title: "Technical Support Fundamental Google" },
+    { src: "/certs/Coursera Technical Support IBM-1.png", title: "Technical Support IBM" },
+    { src: "/certs/ENGINEER TAYO WEBINAR-1.png", title: "ENGINEER TAYO WEBINAR" },
+    { src: "/certs/Communicati-certificate-1.png", title: "Networking Essentials CISCO" },
+    { src: "/certs/Intro to Packet -certificate-1.png", title: "Introduction to Packet Tracer" },
+    { src: "/certs/ISITE NATIONAL COMPETITION WEBINAR.jpg", title: "ISITE NATIONAL COMPETITION" },
+    { src: "/certs/LYCO WEBINAR.png", title: "\"The Journey from Code to Career\"" }
   ];
 
 
@@ -679,7 +680,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       {/* Add header content here */}
                     </div>
                     <div className="mt-auto flex justify-end">
-                      <img
+                      <Image
                         src={card.src}
                         width={600}
                         height={225}
@@ -687,6 +688,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                         className="rounded-t-md object-cover no-select cursor-pointer"
                         onClick={() => handleImageClick(card.src)}
                       />
+
                     </div>
                     <div className="flex items-center justify-center">
                       <h3 className="text-muted-foreground">{card.title}</h3>
@@ -695,7 +697,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 ))}
               </div>
 
-             
+
             </div>
 
           </div>
