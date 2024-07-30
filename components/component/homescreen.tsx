@@ -47,7 +47,7 @@ const FullScreenImageModal: React.FC<FullScreenImageModalProps> = ({ src, isOpen
           className="relative max-w-full max-h-full"
           onClick={(e) => e.stopPropagation()} // Prevents closing when clicking on the image
         >
-          <img
+          <image
             src={src}
             alt="Full Screen"
             className="fullscreen-image cursor-pointer"
@@ -153,8 +153,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
               <div className="flex items-center justify-center emphasis-animation ">
                 <div className="circle-container  ">
                   <div className="">
-                    <img
-                      src='./me.png'
+                    <Image
+                      src='/me.png'
                       width={300}
                       height={300}
                       alt="John Doe"
@@ -211,8 +211,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
-                    <img
-                      src="./POS.png"
+                    <Image
+                      src="/POS.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -245,8 +245,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 </Card>
                 <Card className=" no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center ">
-                    <img
-                      src="./quicktrack.png"
+                    <Image
+                      src="/quicktrack.png"
                       width={400}
                       height={225}
                       alt="Project 2"
@@ -278,8 +278,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 </Card>
                 <Card className=" no-selectflex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
-                    <img
-                      src="./LSPU.jpg"
+                    <Image
+                      src="/LSPU.jpg"
                       width={400}
                       height={225}
                       alt="Project 3"
@@ -315,8 +315,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 </Card>
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
-                    <img
-                      src="./LSPU2.png"
+                    <Image
+                      src="/LSPU2.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -351,8 +351,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
-                    <img
-                      src="./cashiering.png"
+                    <Image
+                      src="/cashiering.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -387,8 +387,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
-                    <img
-                      src="./tictactoe.png"
+                    <Image
+                      src="/tictactoe.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -439,8 +439,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
                 <Card className="no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center no-select">
-                    <img
-                      src="./sumobot.png"
+                    <Image
+                      src="/sumobot.png"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -477,8 +477,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
-                    <img
-                      src="./smartfan.jpg"
+                    <Image
+                      src="/smartfan.jpg"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -514,8 +514,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
-                    <img
-                      src="./ROBOT.jpg"
+                    <Image
+                      src="/ROBOT.jpg"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -560,8 +560,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
                 <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
-                    <img
-                      src="./watervending.png"
+                    <Image
+                      src="/watervending.png"
                       width={400}
                       height={225}
                       alt="Project 1"
