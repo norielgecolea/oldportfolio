@@ -114,7 +114,7 @@ html {
   }
 }
 .no-right-click {
-  pointer-events: none;
+ 
 }
 @keyframes fadeIn {
   from {

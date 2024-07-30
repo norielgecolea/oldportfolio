@@ -1077,7 +1077,9 @@ html {
   padding: 10px;
   border-radius: 20px;
 }
-
+.no-right-click {
+ 
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1343,27 +1345,6 @@ html {
 
 /* styles/globals.css */
 
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.entryappear {
-  opacity: 0; /* Start with the element hidden */
-  transform: translateY(100px);
-}
-
-.entryappear.visible {
-  animation: appear ease-in-out both;
-  animation-fill-mode: forwards; /* Keeps the final state of the animation */
-}
-
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -1461,4 +1442,5 @@ html {
     padding-right: 2rem;
   }
 }
+
 
