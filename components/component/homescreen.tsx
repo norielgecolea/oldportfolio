@@ -48,7 +48,7 @@ const FullScreenImageModal: React.FC<FullScreenImageModalProps> = ({ src, isOpen
           onClick={(e) => e.stopPropagation()} // Prevents closing when clicking on the image
         >
           <img
-           
+
             src={src}
             alt="Full Screen"
             className="fullscreen-image cursor-pointer"
@@ -674,24 +674,26 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
 
 
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
                 {cardData.map((card, index) => (
                   <div key={index} className="no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                     <div className="flex items-center justify-center">
-                      {/* Add header content here */}
+                    <Image
+                          src={card.src}
+                          width={600}
+                          height={225}
+                          alt={card.title}
+                          className="rounded-t-md object-cover no-select cursor-pointer items-center justify-center"
+                          onClick={() => handleImageClick(card.src)}
+                        />
                     </div>
-                    <div className="mt-auto flex justify-end">
-                      <Image
-                        src={card.src}
-                        width={600}
-                        height={225}
-                        alt={card.title}
-                        className="rounded-t-md object-cover no-select cursor-pointer"
-                        onClick={() => handleImageClick(card.src)}
-                      />
+                    <div className="space-y-2">
+                     
+                       
+                     
                     </div>
-                    <div className="flex items-center justify-center">
-                      <h3 className="text-muted-foreground">{card.title}</h3>
+                    <div className="mt-auto flex  justify-center">
+                      <h3 className="text-muted-foreground text-center items-center justify-center">{card.title}</h3>
                     </div>
                   </div>
                 ))}

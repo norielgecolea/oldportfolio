@@ -44,7 +44,7 @@ export default function Home() {
           <nav className="hidden space-x-4 md:flex">
             <button onClick={() => setCurrentView('about')} className="hover:text-primary">About</button>
             <button onClick={() => setCurrentView('projects')} className="hover:text-primary">Projects</button>
-            <button onClick={() => setCurrentView('skills')} className="hover:text-primary">Skills</button>
+            <button onClick={() => setCurrentView('skills')} className="hover:text-primary">Skills and Certificates</button>
             <button onClick={() => setCurrentView('contact')} className="hover:text-primary">Contact</button>
           </nav>
           <button className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 md:hidden">
