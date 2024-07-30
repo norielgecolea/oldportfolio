@@ -50,7 +50,7 @@ const FullScreenImageModal: React.FC<FullScreenImageModalProps> = ({ src, isOpen
           <Image
             src={src}
             alt="Full Screen"
-            className="fullscreen-image cursor-pointer"
+            className=" no-right-click fullscreen-image cursor-pointer"
           />
           <button
             className="absolute top-4 right-4 text-white text-3xl bg-black bg-opacity-50 rounded-full p-1 hover:bg-opacity-75"
@@ -158,7 +158,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       width={300}
                       height={300}
                       alt="John Doe"
-                      className="h-64 w-64 rounded-full object-cover fade-in-up   "
+                      className="no-right-click h-64 w-64 rounded-full object-cover fade-in-up   "
                     />
                   </div>
                 </div>
@@ -216,7 +216,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       width={400}
                       height={225}
                       alt="Project 1"
-                      className="rounded-t-md object-cover py-5 no-select"
+                      className=" no-right-click rounded-t-md object-cover py-5 no-select"
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
@@ -250,7 +250,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       width={400}
                       height={225}
                       alt="Project 2"
-                      className="rounded-t-md object-cover py-5 no-select"
+                      className=" no-right-click rounded-t-md object-cover py-5 no-select"
                     />
                   </CardHeader>
                   <CardContent className="space-y-2 ">
@@ -283,7 +283,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       width={400}
                       height={225}
                       alt="Project 3"
-                      className="rounded-t-md object-cover py-5 no-select"
+                      className="no-right-click rounded-t-md object-cover py-5 no-select"
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
@@ -320,7 +320,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       width={400}
                       height={225}
                       alt="Project 1"
-                      className="rounded-t-md object-cover  py-5 no-select"
+                      className="no-right-click rounded-t-md object-cover  py-5 no-select"
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
@@ -356,7 +356,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       width={400}
                       height={225}
                       alt="Project 1"
-                      className="rounded-t-md object-cover  py-5"
+                      className="no-right-click rounded-t-md object-cover  py-5"
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
@@ -392,7 +392,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       width={400}
                       height={225}
                       alt="Project 1"
-                      className="rounded-t-md object-cover  py-5"
+                      className="no-right-click rounded-t-md object-cover  py-5"
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
@@ -444,7 +444,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       width={400}
                       height={225}
                       alt="Project 1"
-                      className="rounded-t-md object-cover  py-5 no-select"
+                      className="no-right-click rounded-t-md object-cover  py-5 no-select"
                     />
                   </CardHeader>
 
@@ -482,7 +482,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       width={400}
                       height={225}
                       alt="Project 1"
-                      className="rounded-t-md object-cover  py-5"
+                      className="no-right-click rounded-t-md object-cover  py-5"
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
@@ -519,7 +519,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       width={400}
                       height={225}
                       alt="Project 1"
-                      className="rounded-t-md object-cover"
+                      className="no-right-click rounded-t-md object-cover"
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
@@ -565,7 +565,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       width={400}
                       height={225}
                       alt="Project 1"
-                      className="rounded-t-md object-cover  py-5"
+                      className="no-right-click rounded-t-md object-cover  py-5"
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
@@ -685,7 +685,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                         width={600}
                         height={225}
                         alt={card.title}
-                        className="rounded-t-md object-cover no-select cursor-pointer"
+                        className="no-right-click rounded-t-md object-cover no-select cursor-pointer"
                         onClick={() => handleImageClick(card.src)}
                       />
 

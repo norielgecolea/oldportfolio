@@ -113,7 +113,9 @@ html {
     @apply bg-primary text-primary-foreground;
   }
 }
-
+.no-right-click {
+  pointer-events: none;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -379,23 +381,3 @@ html {
 
 /* styles/globals.css */
 
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.entryappear {
-  opacity: 0; /* Start with the element hidden */
-  transform: translateY(100px);
-}
-
-.entryappear.visible {
-  animation: appear ease-in-out both;
-  animation-fill-mode: forwards; /* Keeps the final state of the animation */
-}
