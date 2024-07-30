@@ -47,7 +47,7 @@ const FullScreenImageModal: React.FC<FullScreenImageModalProps> = ({ src, isOpen
           className="relative max-w-full max-h-full"
           onClick={(e) => e.stopPropagation()} // Prevents closing when clicking on the image
         >
-          <image
+          <Image
             src={src}
             alt="Full Screen"
             className="fullscreen-image cursor-pointer"
