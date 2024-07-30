@@ -560,7 +560,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 
               </div>
 
-              <h2 className="text-1xl text-center font-bold">Here are some of the skills I'm proficient with:</h2>
+              <h2 className="text-1xl text-center font-bold">Here are some of the skills I&apos;m proficient with:</h2>
               <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
                 <div className="space-y-2">
                   <CodeIcon className="h-8 w-8 text-primary" />
