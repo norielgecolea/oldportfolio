@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import meImage from '@/components/component/image/me.jpg';
-import React, { useState, useEffect , useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 
 
@@ -19,7 +19,7 @@ interface HomescreenProps {
 }
 
 function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
-  
+
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
   const skillRef = useRef<HTMLDivElement>(null);
@@ -33,18 +33,18 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
     if (currentView === 'about' && aboutRef.current) {
       aboutRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-    else if(currentView === 'projects' && projectRef.current){
+    else if (currentView === 'projects' && projectRef.current) {
       projectRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-    else if(currentView === 'skills' && skillRef.current){
+    else if (currentView === 'skills' && skillRef.current) {
       skillRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-    else if(currentView === 'contact' && contactRef.current){
+    else if (currentView === 'contact' && contactRef.current) {
       contactRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [currentView]);
 
- 
+
   const router = useRouter();
 
   const handleRedirect = () => {
@@ -69,22 +69,22 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
               <div className="flex items-center justify-center emphasis-animation ">
                 <div className="circle-container  ">
                   <div className="">
-                  <img
-                    src='./me.png'
-                    width={300}
-                    height={300}
-                    alt="John Doe"
-                    className="h-64 w-64 rounded-full object-cover fade-in-up   "
-                  />
+                    <img
+                      src='./me.png'
+                      width={300}
+                      height={300}
+                      alt="John Doe"
+                      className="h-64 w-64 rounded-full object-cover fade-in-up   "
+                    />
                   </div>
                 </div>
               </div>
               <div className="space-y-4">
-             
+
                 <h1 className="text-5xl font-bold  no-select"><p className="text-lg text-muted-foreground no-select">Hi, my name is </p>Noriel Fernando Gecolea <span className="cursor"></span></h1>
                 <p className="text-lg text-muted-foreground no-select">
 
-                I am a graduating computer engineering student with a passion for programming and
+                  I am a graduating computer engineering student with a passion for programming and
                   building innovative, user-friendly applications. With experience in a
                   variety of technologies, I am always eager to expand my knowledge and
                   skills. Additionally, I enjoy music production and working on electronics
@@ -150,7 +150,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                  <button onClick={() => setCurrentView('pos')}
+                    <button onClick={() => setCurrentView('pos')}
                       className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 
                     >
@@ -223,8 +223,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       prefetch={false}
                     >
                       <ArrowRightIcon className="mr-2 h-4 w-4" />
-                        View Project
-                      
+                      View Project
+
                     </Link>
 
                   </CardFooter>
@@ -518,36 +518,6 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
               </div>
             </div>
           </div>
@@ -555,12 +525,13 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
         <section ref={skillRef} id="skills" className="bg-muted py-20">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="space-y-5">
-              <div className="space-y-2 text-center">
-                <h2 className="text-3xl font-bold">About Me</h2>
-                
+
+
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold">Featured Skills</h2>
+                <p className="text-muted-foreground">Here are some of the skills I&apos;m proficient with:</p>
               </div>
 
-              <h2 className="text-1xl text-center font-bold">Here are some of the skills I&apos;m proficient with:</h2>
               <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
                 <div className="space-y-2">
                   <CodeIcon className="h-8 w-8 text-primary" />
@@ -600,12 +571,427 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     <li>AWS</li>
                     <li>Figma</li>
                   </ul>
+
                 </div>
+                <div className="space-y-9"></div>
+
               </div>
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold">Featured Certificates</h2>
+                <p className="text-muted-foreground">Here are some of my certifications</p>
+              </div>
+
+
+
+
+
+
+
+
+
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="space-y-2 flex items-center justify-center">
+                
+                    <img
+                      src="./certs/Coursera Bulding a Calculator-1.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover  no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" >Bulding a Calculator</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="space-y-2 flex items-center justify-center">
+                
+                    <img
+                      src="./certs/csnet.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover  no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" >C# for .NET Developers</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="space-y-2 flex items-center justify-center">
+                
+                    <img
+                      src="./certs/Coursera C++ Data Structures-1.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover  no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" > C++ Data Structures</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="space-y-2 flex items-center justify-center">
+                
+                    <img
+                      src="./certs/Coursera Crash Course on Python-1.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover  no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" >Crash Course on Python</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+                
+
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="space-y-2 flex items-center justify-center">
+                
+                    <img
+                      src="./certs/Coursera Foundation of Computer Science-1.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover  no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" >Foundation of Computer Science</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="space-y-2 flex items-center justify-center">
+                
+                    <img
+                      src="./certs/Coursera Foundation of User Experience Design-1.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover  no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" >Foundation of User Experience Design</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="space-y-2 flex items-center justify-center">
+                
+                    <img
+                      src="./certs/Coursera Introduction to Iot-1.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover  no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" >Introduction to Iot</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="space-y-2 flex items-center justify-center">
+                
+                    <img
+                      src="./certs/Coursera Introduction to visual basic programming-1.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover  no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" >Introduction to visual basic programming</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="space-y-2 flex items-center justify-center">
+                
+                    <img
+                      src="./certs/Coursera Technical Support Fundamental-1.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover  no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" >Technical Support Fundamental Google</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="space-y-2 flex items-center justify-center">
+                
+                    <img
+                      src="./certs/Coursera Technical Support IBM-1.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover  no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" > Technical Support IBM</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="mt-auto flex justify-end">
+                
+                    <img
+                      src="./certs/ENGINEER TAYO WEBINAR-1.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover   no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" >ENGINEER TAYO WEBINAR</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="mt-auto flex justify-end">
+                
+                    <img
+                      src="./certs/Communicati-certificate-1.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover   no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" >Networking Essentials CISCO</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="mt-auto flex justify-end">
+                
+                    <img
+                      src="./certs/Intro to Packet -certificate-1.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover   no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" >Introduction to Packet Tracer</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="mt-auto flex justify-end">
+                
+                    <img
+                      src="./certs/ISITE NATIONAL COMPETITION WEBINAR.jpg"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover   no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" >ISITE NATIONAL COMPETITION</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+                
+                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                 
+                  </CardHeader>
+                  <CardContent className="mt-auto flex justify-end">
+                
+                    <img
+                      src="./certs/LYCO WEBINAR.png"
+                      width={600}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover   no-select"
+                    />
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-center">
+                  <h3 className="text-muted-foreground" >"The Journey from Code to Carrer"</h3>
+                    
+                   
+                  </CardFooter>
+                </Card>
+
+
+           
+
+
+
+
+
+
+
+
+
+
+
+              </div>
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
+
           </div>
+
+
+
+
+
+
+
         </section>
-        <section ref={contactRef}id="contact" className="py-20">
+        <section ref={contactRef} id="contact" className="py-20">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="space-y-8">
               <div className="space-y-2">
@@ -638,30 +1024,30 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
         </section>
       </main>
       <footer className="bg-muted py-8">
-  <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div className="flex items-center justify-between">
-      <div className="flex items-center gap-2">
-        <CodeIcon className="h-6 w-6" />
-        <div>
-          <span className="font-bold">Noriel Fernando Gecolea</span>
-          
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <CodeIcon className="h-6 w-6" />
+              <div>
+                <span className="font-bold">Noriel Fernando Gecolea</span>
+
+              </div>
+            </div>
+            <div className="text-sm text-muted-foreground">© NORIELGECOLEA 2024 - 2025</div>
+            <div className="flex items-center gap-4">
+              <Link href="https://www.linkedin.com/in/norielgecolea/" className="text-muted-foreground hover:text-primary" prefetch={false}>
+                <LinkedinIcon className="h-6 w-6 wiggle" />
+              </Link>
+              <Link href="https://www.instagram.com/norrsss__/" className="text-muted-foreground hover:text-primary" prefetch={false}>
+                <InstagramIcon className="h-6 w-6 wiggle" />
+              </Link>
+              <Link href="https://www.facebook.com/NorielGecolea/" className="text-muted-foreground hover:text-primary" prefetch={false}>
+                <FacebookIcon className="h-6 w-6 wiggle" />
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="text-sm text-muted-foreground">© NORIELGECOLEA 2024 - 2025</div>
-      <div className="flex items-center gap-4">
-        <Link href="https://www.linkedin.com/in/norielgecolea/" className="text-muted-foreground hover:text-primary" prefetch={false}>
-          <LinkedinIcon className="h-6 w-6 wiggle" />
-        </Link>
-        <Link href="https://www.instagram.com/norrsss__/" className="text-muted-foreground hover:text-primary" prefetch={false}>
-          <InstagramIcon className="h-6 w-6 wiggle" />
-        </Link>
-        <Link href="https://www.facebook.com/NorielGecolea/" className="text-muted-foreground hover:text-primary" prefetch={false}>
-          <FacebookIcon className="h-6 w-6 wiggle" />
-        </Link>
-      </div>
-    </div>
-  </div>
-</footer>
+      </footer>
 
     </div>
   )
