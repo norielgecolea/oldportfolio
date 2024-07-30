@@ -712,11 +712,29 @@ video {
     max-width: 1536px;
   }
 }
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
 .sticky {
   position: sticky;
 }
+.inset-0 {
+  inset: 0px;
+}
+.right-4 {
+  right: 1rem;
+}
 .top-0 {
   top: 0px;
+}
+.top-4 {
+  top: 1rem;
 }
 .z-50 {
   z-index: 50;
@@ -761,6 +779,9 @@ video {
 .h-full {
   height: 100%;
 }
+.max-h-full {
+  max-height: 100%;
+}
 .min-h-\[100dvh\] {
   min-height: 100dvh;
 }
@@ -782,11 +803,17 @@ video {
 .max-w-7xl {
   max-width: 80rem;
 }
+.max-w-full {
+  max-width: 100%;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -853,11 +880,6 @@ video {
   margin-top: calc(2.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2.25rem * var(--tw-space-y-reverse));
 }
-.space-y-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
-}
 .rounded-full {
   border-radius: 9999px;
 }
@@ -880,6 +902,10 @@ video {
 .bg-background\/80 {
   background-color: hsl(var(--background) / 0.8);
 }
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
 .bg-card {
   background-color: hsl(var(--card));
 }
@@ -889,8 +915,17 @@ video {
 .bg-primary {
   background-color: hsl(var(--primary));
 }
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+.bg-opacity-75 {
+  --tw-bg-opacity: 0.75;
+}
 .object-cover {
   object-fit: cover;
+}
+.p-1 {
+  padding: 0.25rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -911,9 +946,6 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.text-center {
-  text-align: center;
 }
 .text-3xl {
   font-size: 1.875rem;
@@ -952,6 +984,10 @@ video {
 }
 .text-primary-foreground {
   color: hsl(var(--primary-foreground));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -994,6 +1030,9 @@ video {
 }
 .fade-in {
   --tw-enter-opacity: 0;
+}
+.fade-out {
+  --tw-exit-opacity: 0;
 }
 
 html {
@@ -1254,6 +1293,51 @@ html {
   }
 }
 
+/* In your global CSS file or a CSS module */
+.fade-in {
+  animation: fadeIn 0.3s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fullscreen-image {
+  max-width: 100%;
+  max-height: 100vh; /* Ensures image does not exceed the viewport height */
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .fullscreen-image {
+    max-height: 80vh; /* Adjust height for smaller screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .fullscreen-image {
+    max-height: 90vh; /* Adjust height for larger screens */
+  }
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -1266,6 +1350,10 @@ html {
 
 .hover\:bg-primary\/90:hover {
   background-color: hsl(var(--primary) / 0.9);
+}
+
+.hover\:bg-opacity-75:hover {
+  --tw-bg-opacity: 0.75;
 }
 
 .hover\:text-accent-foreground:hover {
@@ -1334,10 +1422,6 @@ html {
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-
-  .md\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 1024px) {
@@ -1346,12 +1430,9 @@ html {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 }
+

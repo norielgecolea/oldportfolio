@@ -9,16 +9,95 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import meImage from '@/components/component/image/me.jpg';
 import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 
+function FullScreenImageModal({ src, isOpen, onClose }) {
+  const [showModal, setShowModal] = useState(isOpen);
+  const [fadeClass, setFadeClass] = useState(isOpen ? 'fade-in' : '');
 
+  useEffect(() => {
+    if (isOpen) {
+      setShowModal(true);
+      setFadeClass('fade-in');
+    } else {
+      setFadeClass('fade-out');
+    }
+  }, [isOpen]);
 
+  useEffect(() => {
+    if (fadeClass === 'fade-out') {
+      const timer = setTimeout(() => setShowModal(false), 300); // Match the duration of the fade-out animation (300ms)
+      return () => clearTimeout(timer);
+    }
+  }, [fadeClass]);
 
+  return (
+    <div
+      className={`fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 ${fadeClass}`}
+      style={{ display: showModal ? 'flex' : 'none' }}
+      onClick={onClose} // Clicking outside the image closes the modal
+    >
+      {showModal && (
+        <div
+          className="relative max-w-full max-h-full"
+          onClick={(e) => e.stopPropagation()} // Prevents closing when clicking on the image
+        >
+          <img
+            src={src}
+            alt="Full Screen"
+            className="fullscreen-image cursor-pointer"
+          />
+          <button
+            className="absolute top-4 right-4 text-white text-3xl bg-black bg-opacity-50 rounded-full p-1 hover:bg-opacity-75"
+            onClick={onClose} // Closes the modal when clicked
+          >
+            &times;
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+FullScreenImageModal.propTypes = {
+  src: PropTypes.string.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+};
 interface HomescreenProps {
   currentView: string;
   setCurrentView: (view: string) => void; // Add this to update view
 }
 
 function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
+  const [modalData, setModalData] = useState({ isOpen: false, src: '' });
+
+  const handleImageClick = (src) => {
+    setModalData({ isOpen: true, src });
+  };
+
+  const handleCloseModal = () => {
+    setModalData((prevData) => ({ ...prevData, isOpen: false }));
+  };
+
+  const cardData = [
+    { src: "./certs/Coursera Bulding a Calculator-1.png", title: "Building a Calculator" },
+    { src: "./certs/csnet.png", title: "C# for .NET Developers" },
+    { src: "./certs/Coursera C++ Data Structures-1.png", title: "C++ Data Structures" },
+    { src: "./certs/Coursera Crash Course on Python-1.png", title: "Crash Course on Python" },
+    { src: "./certs/Coursera Foundation of Computer Science-1.png", title: "Foundation of Computer Science" },
+    { src: "./certs/Coursera Foundation of User Experience Design-1.png", title: "Foundation of User Experience Design" },
+    { src: "./certs/Coursera Introduction to Iot-1.png", title: "Introduction to Iot" },
+    { src: "./certs/Coursera Introduction to visual basic programming-1.png", title: "Introduction to Visual Basic Programming" },
+    { src: "./certs/Coursera Technical Support Fundamental-1.png", title: "Technical Support Fundamental Google" },
+    { src: "./certs/Coursera Technical Support IBM-1.png", title: "Technical Support IBM" },
+    { src: "./certs/ENGINEER TAYO WEBINAR-1.png", title: "ENGINEER TAYO WEBINAR" },
+    { src: "./certs/Communicati-certificate-1.png", title: "Networking Essentials CISCO" },
+    { src: "./certs/Intro to Packet -certificate-1.png", title: "Introduction to Packet Tracer" },
+    { src: "./certs/ISITE NATIONAL COMPETITION WEBINAR.jpg", title: "ISITE NATIONAL COMPETITION" },
+    { src: "./certs/LYCO WEBINAR.png", title: "\"The Journey from Code to Career\"" }
+  ];
+
 
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
@@ -56,7 +135,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
 
 
-    <div className="flex min-h-[100dvh] flex-col bg-background text-foreground">
+    <div className="flex min-h-[100dvh] flex-col bg-background text-foreground }">
 
 
 
@@ -590,401 +669,34 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
 
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="space-y-2 flex items-center justify-center">
-                
-                    <img
-                      src="./certs/Coursera Bulding a Calculator-1.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover  no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >Bulding a Calculator</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="space-y-2 flex items-center justify-center">
-                
-                    <img
-                      src="./certs/csnet.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover  no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >C# for .NET Developers</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="space-y-2 flex items-center justify-center">
-                
-                    <img
-                      src="./certs/Coursera C++ Data Structures-1.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover  no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" > C++ Data Structures</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="space-y-2 flex items-center justify-center">
-                
-                    <img
-                      src="./certs/Coursera Crash Course on Python-1.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover  no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >Crash Course on Python</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-                
-
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="space-y-2 flex items-center justify-center">
-                
-                    <img
-                      src="./certs/Coursera Foundation of Computer Science-1.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover  no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >Foundation of Computer Science</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="space-y-2 flex items-center justify-center">
-                
-                    <img
-                      src="./certs/Coursera Foundation of User Experience Design-1.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover  no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >Foundation of User Experience Design</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="space-y-2 flex items-center justify-center">
-                
-                    <img
-                      src="./certs/Coursera Introduction to Iot-1.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover  no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >Introduction to Iot</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="space-y-2 flex items-center justify-center">
-                
-                    <img
-                      src="./certs/Coursera Introduction to visual basic programming-1.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover  no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >Introduction to visual basic programming</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="space-y-2 flex items-center justify-center">
-                
-                    <img
-                      src="./certs/Coursera Technical Support Fundamental-1.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover  no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >Technical Support Fundamental Google</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="space-y-2 flex items-center justify-center">
-                
-                    <img
-                      src="./certs/Coursera Technical Support IBM-1.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover  no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" > Technical Support IBM</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="mt-auto flex justify-end">
-                
-                    <img
-                      src="./certs/ENGINEER TAYO WEBINAR-1.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover   no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >ENGINEER TAYO WEBINAR</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="mt-auto flex justify-end">
-                
-                    <img
-                      src="./certs/Communicati-certificate-1.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover   no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >Networking Essentials CISCO</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="mt-auto flex justify-end">
-                
-                    <img
-                      src="./certs/Intro to Packet -certificate-1.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover   no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >Introduction to Packet Tracer</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="mt-auto flex justify-end">
-                
-                    <img
-                      src="./certs/ISITE NATIONAL COMPETITION WEBINAR.jpg"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover   no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >ISITE NATIONAL COMPETITION</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-                
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                 
-                  </CardHeader>
-                  <CardContent className="mt-auto flex justify-end">
-                
-                    <img
-                      src="./certs/LYCO WEBINAR.png"
-                      width={600}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover   no-select"
-                    />
-                  </CardContent>
-                  <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >&quot;The Journey from Code to Carrer&quot;</h3>
-                    
-                   
-                  </CardFooter>
-                </Card>
-
-
-           
-
-
-
-
-
-
-
-
-
-
-
+                {cardData.map((card, index) => (
+                  <div key={index} className="no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                    <div className="flex items-center justify-center">
+                      {/* Add header content here */}
+                    </div>
+                    <div className="mt-auto flex justify-end">
+                      <img
+                        src={card.src}
+                        width={600}
+                        height={225}
+                        alt={card.title}
+                        className="rounded-t-md object-cover no-select cursor-pointer"
+                        onClick={() => handleImageClick(card.src)}
+                      />
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <h3 className="text-muted-foreground">{card.title}</h3>
+                    </div>
+                  </div>
+                ))}
               </div>
 
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+             
             </div>
 
           </div>
 
-
+          <FullScreenImageModal src={modalData.src} isOpen={modalData.isOpen} onClose={handleCloseModal} />
 
 
 
