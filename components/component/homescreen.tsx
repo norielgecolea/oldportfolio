@@ -901,7 +901,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     />
                   </CardContent>
                   <CardFooter className="flex items-center justify-center">
-                  <h3 className="text-muted-foreground" >"The Journey from Code to Carrer"</h3>
+                  <h3 className="text-muted-foreground" >&quot;The Journey from Code to Carrer&quot;</h3>
                     
                    
                   </CardFooter>
