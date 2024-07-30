@@ -10,8 +10,12 @@ import { Button } from "@/components/ui/button";
 import meImage from '@/components/component/image/me.jpg';
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-
-function FullScreenImageModal({ src, isOpen, onClose }) {
+interface FullScreenImageModalProps {
+  src: string;
+  isOpen: boolean;
+  onClose: () => void;
+}
+const FullScreenImageModal: React.FC<FullScreenImageModalProps> = ({ src, isOpen, onClose }) => {
   const [showModal, setShowModal] = useState(isOpen);
   const [fadeClass, setFadeClass] = useState(isOpen ? 'fade-in' : '');
 
@@ -72,7 +76,7 @@ interface HomescreenProps {
 function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
   const [modalData, setModalData] = useState({ isOpen: false, src: '' });
 
-  const handleImageClick = (src) => {
+  const handleImageClick = (src: string) => {
     setModalData({ isOpen: true, src });
   };
 
