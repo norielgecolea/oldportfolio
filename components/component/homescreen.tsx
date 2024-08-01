@@ -24,8 +24,10 @@ const FullScreenImageModal: React.FC<FullScreenImageModalProps> = ({ src, isOpen
     if (isOpen) {
       setShowModal(true);
       setFadeClass('fade-in');
+      document.body.style.overflow = 'hidden'; // Lock scroll
     } else {
       setFadeClass('fade-out');
+      document.body.style.overflow = '';
     }
   }, [isOpen]);
 
@@ -33,8 +35,11 @@ const FullScreenImageModal: React.FC<FullScreenImageModalProps> = ({ src, isOpen
     if (fadeClass === 'fade-out') {
       const timer = setTimeout(() => setShowModal(false), 300); // Match the duration of the fade-out animation (300ms)
       return () => clearTimeout(timer);
+      
     }
   }, [fadeClass]);
+
+
 
   return (
     <div
@@ -48,7 +53,6 @@ const FullScreenImageModal: React.FC<FullScreenImageModalProps> = ({ src, isOpen
           onClick={(e) => e.stopPropagation()} // Prevents closing when clicking on the image
         >
           <img
-
             src={src}
             alt="Full Screen"
             className="fullscreen-image cursor-pointer"
