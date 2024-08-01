@@ -159,7 +159,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       width={300}
                       height={300}
                       alt="John Doe"
-                      className="h-64 w-64 rounded-full object-cover fade-in-up   "
+                      className="h-80 w-80 rounded-full object-cover fade-in-up   "
                     />
                   </div>
                 </div>
@@ -676,22 +676,22 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
               <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
                 {cardData.map((card, index) => (
-                  <div key={index} className="no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                    <div className="flex items-center justify-center">
-                    <Image
-                          src={card.src}
-                          width={600}
-                          height={225}
-                          alt={card.title}
-                          className="rounded-t-md object-cover no-select cursor-pointer items-center justify-center"
-                          onClick={() => handleImageClick(card.src)}
-                        />
-                    </div>
-                    <div className="space-y-2">
-                     
-                       
-                     
-                    </div>
+                 <div 
+                 key={index} 
+                 className="no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg"
+               >
+                 {/* Image Container */}
+                 <div className="flex-1 flex items-center justify-center">
+                   <Image
+                     src={card.src}
+                     width={600}
+                     height={225}
+                     alt={card.title}
+                     className=" object-cover cursor-pointer"
+                     onClick={() => handleImageClick(card.src)}
+                   />
+                 </div>
+                    
                     <div className="mt-auto flex  justify-center">
                       <h3 className="text-muted-foreground text-center items-center justify-center">{card.title}</h3>
                     </div>

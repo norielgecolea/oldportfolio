@@ -31,7 +31,7 @@ export default function Home() {
   }
   return (
 
-    <div className="flex min-h-[100dvh] flex-col bg-background text-foreground">
+    <div className="flex min-h-[100dvh] flex-col bg-background/80 text-foreground">
       <Head>
         <title>Noriel Gecolea</title>
       </Head>
@@ -39,9 +39,9 @@ export default function Home() {
         <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <button onClick={homeclick} className="flex items-center gap-2">
             <CodeIcon className="h-6 w-6" />
-            <span className="font-bold">Noriel Fernando Gecolea</span>
+            <span className="font-bold text-lg">Noriel Fernando Gecolea</span>
           </button>
-          <nav className="hidden space-x-4 md:flex">
+          <nav className="hidden space-x-4 md:flex text-lg">
             <button onClick={() => setCurrentView('about')} className="hover:text-primary">About</button>
             <button onClick={() => setCurrentView('projects')} className="hover:text-primary">Projects</button>
             <button onClick={() => setCurrentView('skills')} className="hover:text-primary">Skills and Certificates</button>
