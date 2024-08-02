@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import meImage from '@/components/component/image/me.jpg';
+import meImage from '@/components/component/image/me.webp';
 import React, { useState, useEffect, CSSProperties, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Image from "next/image";
@@ -99,22 +99,22 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
   };
 
   const cardData = [
-    { src: "/certs/Coursera Bulding a Calculator-1.png", title: "Building a Calculator" },
-    { src: "/certs/csnet.png", title: "C# for .NET Developers" },
-    { src: "/certs/Coursera C++ Data Structures-1.png", title: "C++ Data Structures" },
-    { src: "/certs/Coursera Crash Course on Python-1.png", title: "Crash Course on Python" },
-    { src: "/certs/Coursera Foundation of Computer Science-1.png", title: "Foundation of Computer Science" },
-    { src: "/certs/Coursera Foundation of User Experience Design-1.png", title: "Foundation of User Experience Design" },
-    { src: "/certs/Coursera Introduction to Iot-1.png", title: "Introduction to Iot" },
-    { src: "/certs/Coursera Introduction to visual basic programming-1.png", title: "Introduction to Visual Basic Programming" },
-    { src: "/certs/Coursera Technical Support Fundamental-1.png", title: "Technical Support Fundamental Google" },
-    { src: "/certs/Coursera Technical Support IBM-1.png", title: "Technical Support IBM" },
-    { src: "/certs/ENGINEER TAYO WEBINAR-1.png", title: "ENGINEER TAYO WEBINAR" },
-    { src: "/certs/Communicati-certificate-1.png", title: "Networking Essentials CISCO" },
-    { src: "/certs/Intro to Packet -certificate-1.png", title: "Introduction to Packet Tracer" },
-    { src: "/certs/ISITE NATIONAL COMPETITION WEBINAR.jpg", title: "ISITE NATIONAL COMPETITION" },
-    { src: "/certs/LYCO WEBINAR.png", title: "\"The Journey from Code to Career\"" },
-    { src: "/certs/Coursera 3TNWU5TDT8U8-1.png", title: "Foundation of Cybersecurity" }
+    { src: "/certs/Coursera Bulding a Calculator-1.webp", title: "Building a Calculator" },
+    { src: "/certs/csnet.webp", title: "C# for .NET Developers" },
+    { src: "/certs/Coursera C++ Data Structures-1.webp", title: "C++ Data Structures" },
+    { src: "/certs/Coursera Crash Course on Python-1.webp", title: "Crash Course on Python" },
+    { src: "/certs/Coursera Foundation of Computer Science-1.webp", title: "Foundation of Computer Science" },
+    { src: "/certs/Coursera Foundation of User Experience Design-1.webp", title: "Foundation of User Experience Design" },
+    { src: "/certs/Coursera Introduction to Iot-1.webp", title: "Introduction to Iot" },
+    { src: "/certs/Coursera Introduction to visual basic programming-1.webp", title: "Introduction to Visual Basic Programming" },
+    { src: "/certs/Coursera Technical Support Fundamental-1.webp", title: "Technical Support Fundamental Google" },
+    { src: "/certs/Coursera Technical Support IBM-1.webp", title: "Technical Support IBM" },
+    { src: "/certs/ENGINEER TAYO WEBINAR-1.webp", title: "ENGINEER TAYO WEBINAR" },
+    { src: "/certs/Communicati-certificate-1.webp", title: "Networking Essentials CISCO" },
+    { src: "/certs/Intro to Packet -certificate-1.webp", title: "Introduction to Packet Tracer" },
+    { src: "/certs/ISITE NATIONAL COMPETITION WEBINAR.webp", title: "ISITE NATIONAL COMPETITION" },
+    { src: "/certs/LYCO WEBINAR.webp", title: "\"The Journey from Code to Career\"" },
+    { src: "/certs/Coursera 3TNWU5TDT8U8-1.webp", title: "Foundation of Cybersecurity" }
   ];
 
 
@@ -231,7 +231,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <Card className=" no-select bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
-                      src="/POS.png"
+                      src="/POS.webp"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -265,7 +265,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <Card className=" no-select bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center ">
                     <Image
-                      src="/quicktrack.png"
+                      src="/quicktrack.webp"
                       width={400}
                       height={225}
                       alt="Project 2"
@@ -298,7 +298,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <Card className="bg-cardd no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
-                      src="/LSPU.jpg"
+                      src="/LSPU.webp"
                       width={400}
                       height={225}
                       alt="Project 3"
@@ -335,7 +335,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <Card className=" bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
-                      src="/LSPU2.png"
+                      src="/LSPU2.webp"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -371,7 +371,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <Card className=" bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
-                      src="/cashiering.png"
+                      src="/cashiering.webp"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -407,7 +407,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <Card className="bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
-                      src="/tictactoe.png"
+                      src="/tictactoe.webp"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -459,7 +459,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <Card className="bg-cardd no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center no-select">
                     <Image
-                      src="/sumobot.png"
+                      src="/sumobot.webp"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -497,7 +497,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <Card className="bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
-                      src="/smartfan.jpg"
+                      src="/smartfan.webp"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -534,7 +534,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <Card className="bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
-                      src="/ROBOT.jpg"
+                      src="/ROBOT.webp"
                       width={400}
                       height={225}
                       alt="Project 1"
@@ -580,7 +580,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <Card className="bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
-                      src="/watervending.png"
+                      src="/watervending.webp"
                       width={400}
                       height={225}
                       alt="Project 1"
