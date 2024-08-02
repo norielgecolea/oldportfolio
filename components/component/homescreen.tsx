@@ -113,7 +113,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
     { src: "/certs/Communicati-certificate-1.png", title: "Networking Essentials CISCO" },
     { src: "/certs/Intro to Packet -certificate-1.png", title: "Introduction to Packet Tracer" },
     { src: "/certs/ISITE NATIONAL COMPETITION WEBINAR.jpg", title: "ISITE NATIONAL COMPETITION" },
-    { src: "/certs/LYCO WEBINAR.png", title: "\"The Journey from Code to Career\"" }
+    { src: "/certs/LYCO WEBINAR.png", title: "\"The Journey from Code to Career\"" },
+    { src: "/certs/Coursera 3TNWU5TDT8U8-1.png", title: "Foundation of Cybersecurity" }
   ];
 
 
@@ -170,7 +171,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       src='/me.png'
                       width={300}
                       height={300}
-                      alt="John Doe"
+                      alt=""
                       className="h-80 w-80 rounded-full object-cover fade-in-up   "
                     />
                   </div>
