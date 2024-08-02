@@ -8,9 +8,17 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import meImage from '@/components/component/image/me.jpg';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, CSSProperties, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Image from "next/image";
+
+
+
+interface CustomCSSProperties extends CSSProperties {
+  '--i'?: number;
+}
+
+
 interface FullScreenImageModalProps {
   src: string;
   isOpen: boolean;
@@ -35,7 +43,7 @@ const FullScreenImageModal: React.FC<FullScreenImageModalProps> = ({ src, isOpen
     if (fadeClass === 'fade-out') {
       const timer = setTimeout(() => setShowModal(false), 300); // Match the duration of the fade-out animation (300ms)
       return () => clearTimeout(timer);
-      
+
     }
   }, [fadeClass]);
 
@@ -152,7 +160,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
 
       <main className="flex-1">
-        <section ref={aboutRef} id="about" className="bg-muted py-20 fade-in ">
+        <section ref={aboutRef} id="about" className="bg-muted py-20 fade-in grain ">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div className="flex items-center justify-center emphasis-animation ">
@@ -206,15 +214,20 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
           </div>
         </section>
 
-        <section ref={projectRef} id="projects" className="py-20 fade-in1">
-          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section ref={projectRef} id="projects" className="py-20 fade-in1 hiddenov wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+          <div className=" container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+          
             <div className="space-y-8">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold">Featured Software Projects</h2>
                 <p className="text-muted-foreground">Here are some of my recent projects.</p>
               </div>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                
+                <Card className=" no-select bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
                       src="/POS.png"
@@ -248,7 +261,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </button>
                   </CardFooter>
                 </Card>
-                <Card className=" no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                <Card className=" no-select bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center ">
                     <Image
                       src="/quicktrack.png"
@@ -281,7 +294,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </Link>
                   </CardFooter>
                 </Card>
-                <Card className=" no-selectflex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                <Card className="bg-cardd no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
                       src="/LSPU.jpg"
@@ -318,7 +331,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
                   </CardFooter>
                 </Card>
-                <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                <Card className=" bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
                       src="/LSPU2.png"
@@ -354,7 +367,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   </CardFooter>
                 </Card>
 
-                <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                <Card className=" bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
                       src="/cashiering.png"
@@ -390,7 +403,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   </CardFooter>
                 </Card>
 
-                <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                <Card className="bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
                       src="/tictactoe.png"
@@ -442,7 +455,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
 
 
-                <Card className="no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                <Card className="bg-cardd no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center no-select">
                     <Image
                       src="/sumobot.png"
@@ -480,7 +493,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   </CardFooter>
                 </Card>
 
-                <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                <Card className="bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
                       src="/smartfan.jpg"
@@ -517,7 +530,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   </CardFooter>
                 </Card>
 
-                <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                <Card className="bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
                       src="/ROBOT.jpg"
@@ -563,7 +576,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
 
 
-                <Card className="flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                <Card className="bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
                       src="/watervending.png"
@@ -611,7 +624,11 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
             </div>
           </div>
         </section>
-        <section ref={skillRef} id="skills" className="bg-muted py-20">
+
+
+
+
+        <section ref={skillRef} id="skills" className="bg-muted py-20 grain">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="space-y-5">
 
@@ -680,22 +697,22 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
               <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
                 {cardData.map((card, index) => (
-                 <div 
-                 key={index} 
-                 className="no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg"
-               >
-                 {/* Image Container */}
-                 <div className="flex-1 flex items-center justify-center">
-                   <Image
-                     src={card.src}
-                     width={600}
-                     height={225}
-                     alt={card.title}
-                     className=" object-cover cursor-pointer"
-                     onClick={() => handleImageClick(card.src)}
-                   />
-                 </div>
-                    
+                  <div
+                    key={index}
+                    className="no-select bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg"
+                  >
+                    {/* Image Container */}
+                    <div className="flex-1 flex items-center justify-center">
+                      <Image
+                        src={card.src}
+                        width={600}
+                        height={225}
+                        alt={card.title}
+                        className=" object-cover cursor-pointer"
+                        onClick={() => handleImageClick(card.src)}
+                      />
+                    </div>
+
                     <div className="mt-auto flex  justify-center">
                       <h3 className="text-muted-foreground text-center items-center justify-center">{card.title}</h3>
                     </div>
