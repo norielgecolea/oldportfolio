@@ -216,18 +216,18 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
         </section>
 
         <section ref={projectRef} id="projects" className="py-20 fade-in1 hiddenov wrapper">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
           <div className=" container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
-          
+
             <div className="space-y-8">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold">Featured Software Projects</h2>
                 <p className="text-muted-foreground">Here are some of my recent projects.</p>
               </div>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                
+
                 <Card className=" no-select bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
                     <Image
@@ -285,14 +285,13 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                    <Link
-                      href="#"
+                    <button onClick={() => setCurrentView('pos')}
                       className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                      prefetch={false}
+
                     >
                       <ArrowRightIcon className="mr-2 h-4 w-4" />
                       View Project
-                    </Link>
+                    </button>
                   </CardFooter>
                 </Card>
                 <Card className="bg-cardd no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
@@ -320,15 +319,13 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                    <Link
-                      href="#"
-                      className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 group"
-                      prefetch={false}
+                    <button onClick={() => setCurrentView('pos')}
+                      className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+
                     >
                       <ArrowRightIcon className="mr-2 h-4 w-4" />
                       View Project
-
-                    </Link>
+                    </button>
 
                   </CardFooter>
                 </Card>
@@ -357,14 +354,13 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                    <Link
-                      href="#"
+                    <button onClick={() => setCurrentView('pos')}
                       className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                      prefetch={false}
+
                     >
                       <ArrowRightIcon className="mr-2 h-4 w-4" />
                       View Project
-                    </Link>
+                    </button>
                   </CardFooter>
                 </Card>
 
@@ -393,14 +389,13 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                    <Link
-                      href="#"
+                    <button onClick={() => setCurrentView('pos')}
                       className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                      prefetch={false}
+
                     >
                       <ArrowRightIcon className="mr-2 h-4 w-4" />
                       View Project
-                    </Link>
+                    </button>
                   </CardFooter>
                 </Card>
 
@@ -429,16 +424,18 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                    <Link
-                      href="#"
+                    <button onClick={() => setCurrentView('pos')}
                       className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                      prefetch={false}
+
                     >
                       <ArrowRightIcon className="mr-2 h-4 w-4" />
                       View Project
-                    </Link>
+                    </button>
                   </CardFooter>
                 </Card>
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
               </div>
 
 
@@ -483,14 +480,13 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                    <Link
-                      href="#"
+                    <button onClick={() => setCurrentView('pos')}
                       className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                      prefetch={false}
+
                     >
                       <ArrowRightIcon className="mr-2 h-4 w-4" />
                       View Project
-                    </Link>
+                    </button>
                   </CardFooter>
                 </Card>
 
@@ -520,14 +516,13 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                    <Link
-                      href="#"
+                    <button onClick={() => setCurrentView('pos')}
                       className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                      prefetch={false}
+
                     >
                       <ArrowRightIcon className="mr-2 h-4 w-4" />
                       View Project
-                    </Link>
+                    </button>
                   </CardFooter>
                 </Card>
 
@@ -561,14 +556,13 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                    <Link
-                      href="#"
+                    <button onClick={() => setCurrentView('pos')}
                       className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                      prefetch={false}
+
                     >
                       <ArrowRightIcon className="mr-2 h-4 w-4" />
                       View Project
-                    </Link>
+                    </button>
                   </CardFooter>
                 </Card>
 
@@ -606,14 +600,13 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                    <Link
-                      href="#"
+                    <button onClick={() => setCurrentView('pos')}
                       className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                      prefetch={false}
+
                     >
                       <ArrowRightIcon className="mr-2 h-4 w-4" />
                       View Project
-                    </Link>
+                    </button>
                   </CardFooter>
                 </Card>
 
@@ -622,6 +615,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
 
               </div>
+
             </div>
           </div>
         </section>

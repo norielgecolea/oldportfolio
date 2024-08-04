@@ -1,26 +1,21 @@
-import { useState , useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
-import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+
 interface POSPageProps {
-  
+
   setCurrentView: (view: string) => void; // Add this to update view
 }
 
-function POSPage({setCurrentView }: POSPageProps) {
+function POSPage({ setCurrentView }: POSPageProps) {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
-}, []);
+  }, []);
   const router = useRouter();
-function scrolltop(){
-  window.scrollTo(0, 0);
-}
+  function scrolltop() {
+    window.scrollTo(0, 0);
+  }
   const handleRedirect = () => {
     router.push('/posss');
   };
@@ -33,180 +28,7 @@ function scrolltop(){
 
 
       <main className="flex-1">
-        <section id="about" className="bg-muted py-20 fade-in ">
-          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              
-              <div className="space-y-4">
-                <h1 className="text-3xl font-bold  no-select">Simple Point Of Sales System<span className="cursor"></span></h1>
-                <p className="text-lg text-muted-foreground no-select">
-                The Simple Point of Sales (POS) System is an intuitive and efficient application designed for managing retail transactions.
-                      Developed using VB.NET and MySQL, this software offers a user-friendly interface
-                      for processing sales, tracking inventory, and generating reports.
-                      Ideal for small to medium-sized businesses.
-                </p>
-
-                <div className="flex gap-4">
-                  <Link
-                    href="#"
-                    className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                    prefetch={false}
-                  >
-                    <DownloadIcon className="mr-2 h-4 w-4" />
-                    Download
-                  </Link>
-                  <Link
-                    href="/pos"
-                    className="inline-flex items-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-muted-foreground shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
-                    prefetch={false}
-                  >
-                    Contact Me
-                  </Link>
-                </div>
-              </div>
-              <div className="flex items-center justify-center emphasis-animation ">
-                <div className="">
-                  <img
-                    src='/POS.png'
-                    width={600}
-                    height={300}
-                    alt="John Doe"
-                    className="rounded-t-md object-cover no-select"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="projects" className="py-20 fade-in1">
-          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="space-y-8">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold">Documentations</h2>
-                <p className="text-muted-foreground">Here are some of my recent projects.</p>
-              </div>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <Card className=" no-select bg-card flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
-                    <img
-                      src="/POS.png"
-                      width={400}
-                      height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover py-5 no-select"
-                    />
-                  </CardHeader>
-                  <CardContent className="space-y-2">
-                    <h3 className="text-xl font-bold no-select" >Simple Point of Sales System (POS)</h3>
-                    <p className="text-muted-foreground no-select" >
-                      The Simple Point of Sales (POS) System is an intuitive and efficient application designed for managing retail transactions.
-                      Developed using VB.NET and MySQL, this software offers a user-friendly interface
-                      for processing sales, tracking inventory, and generating reports.
-                      Ideal for small to medium-sized businesses.
-                    </p>
-                    <div className="flex gap-2 no-select">
-                      <Badge variant="secondary">VB.net</Badge>
-                      <Badge variant="secondary">MySQL</Badge>
-
-                    </div>
-                  </CardContent>
-                  <CardFooter className="mt-auto flex justify-end">
-                    <button onClick={() => setCurrentView('about')}
-                      className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-
-                    >
-                      <ArrowRightIcon className="mr-2 h-4 w-4" />
-                      View Project
-                    </button>
-                  </CardFooter>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="skills" className="bg-muted py-20">
-          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="space-y-8">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold">Skills</h2>
-                <p className="text-muted-foreground">Here are some of the technologies I&apos;m proficient in.</p>
-              </div>
-              <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-                <div className="space-y-2">
-                  <CodeIcon className="h-8 w-8 text-primary" />
-                  <h3 className="text-xl font-bold">Front-end</h3>
-                  <ul className="space-y-1 text-muted-foreground">
-                    <li>React</li>
-                    <li>Vue.js</li>
-                    <li>Angular</li>
-                    <li>HTML/CSS/JavaScript</li>
-                  </ul>
-                </div>
-                <div className="space-y-2">
-                  <ServerIcon className="h-8 w-8 text-primary" />
-                  <h3 className="text-xl font-bold">Back-end</h3>
-                  <ul className="space-y-1 text-muted-foreground">
-                    <li>Node.js</li>
-                    <li>Python</li>
-                    <li>Ruby on Rails</li>
-                    <li>PHP</li>
-                  </ul>
-                </div>
-                <div className="space-y-2">
-                  <DatabaseIcon className="h-8 w-8 text-primary" />
-                  <h3 className="text-xl font-bold">Databases</h3>
-                  <ul className="space-y-1 text-muted-foreground">
-                    <li>FireBase</li>
-                    <li>MySQL</li>
-                    <li>SQLite</li>
-                  </ul>
-                </div>
-                <div className="space-y-2">
-                  <PenToolIcon className="h-8 w-8 text-primary" />
-                  <h3 className="text-xl font-bold">Hardware and Tools</h3>
-                  <ul className="space-y-1 text-muted-foreground">
-                    <li>Arduino</li>
-                    <li>VS</li>
-                    <li>AWS</li>
-                    <li>Figma</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="contact" className="py-20">
-          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="space-y-8">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold">Contact Me</h2>
-                <p className="text-muted-foreground">
-                  Feel free to reach out if you have any questions or would like to collaborate.
-                </p>
-              </div>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div>
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" type="text" required />
-                  </div>
-                  <div>
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" required />
-                  </div>
-                </div>
-                <div>
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" rows={5} required />
-                </div>
-                <Button type="submit" className="w-full">
-                  Send Message
-                </Button>
-              </form>
-            </div>
-          </div>
-        </section>
+        
       </main>
       <footer className="bg-muted py-8">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -237,25 +59,7 @@ function scrolltop(){
 
 
 export default POSPage;
-function ArrowRightIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M5 12h14" />
-      <path d="m12 5 7 7-7 7" />
-    </svg>
-  )
-}
+
 
 
 function CodeIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -279,26 +83,7 @@ function CodeIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 
-function DatabaseIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <ellipse cx="12" cy="5" rx="9" ry="3" />
-      <path d="M3 5V19A9 3 0 0 0 21 19V5" />
-      <path d="M3 12A9 3 0 0 0 21 12" />
-    </svg>
-  )
-}
+
 
 
 function DownloadIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -341,25 +126,6 @@ function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 
-function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-      <path d="M9 18c-4.51 2-5-2-7-2" />
-    </svg>
-  )
-}
 
 function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -381,25 +147,6 @@ function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-function ThreadsLogo(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      width="24"
-      height="24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M4 12a8 8 0 0 1 8-8M4 12a8 8 0 0 0 8 8M12 4a8 8 0 0 1 8 8M12 4a8 8 0 0 0 8 8M12 12a8 8 0 0 1 8 8M12 12a8 8 0 0 0 8 8" />
-    </svg>
-  );
-}
-
 
 
 function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -424,88 +171,3 @@ function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 
-function PenToolIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z" />
-      <path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18" />
-      <path d="m2.3 2.3 7.286 7.286" />
-      <circle cx="11" cy="11" r="2" />
-    </svg>
-  )
-}
-
-
-function ServerIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
-      <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
-      <line x1="6" x2="6.01" y1="6" y2="6" />
-      <line x1="6" x2="6.01" y1="18" y2="18" />
-    </svg>
-  )
-}
-
-
-function TwitterIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-    </svg>
-  )
-}
-
-
-function XIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
-    </svg>
-  )
-}

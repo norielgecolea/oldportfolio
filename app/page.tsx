@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Homescreen from '@/components/component/homescreen';
 import POSPage from '@/components/component/pos';
+
 import Head from 'next/head'
 
 export default function Home() {
