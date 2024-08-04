@@ -42,6 +42,7 @@ export default function Home() {
             <CodeIcon className="h-6 w-6" />
             <span className="font-bold text-lg">Noriel Fernando Gecolea</span>
           </button>
+          
           <nav className="hidden space-x-4 md:flex text-lg">
             <button onClick={() => setCurrentView('about')} className="hover:text-primary">About</button>
             <button onClick={() => setCurrentView('projects')} className="hover:text-primary">Projects</button>

@@ -916,6 +916,10 @@ video {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -934,6 +938,10 @@ video {
 }
 .text-center {
   text-align: center;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .text-3xl {
   font-size: 1.875rem;
@@ -1213,26 +1221,22 @@ html {
 
 .cursor {
   display: inline-block;
-  width: 9px;
-  height: 1.2em;
+  width: 7px;
+  height: 1.1em;
   background-color: rgb(0, 0, 0);
-  animation: blink 1s step-start infinite;
+  animation: blink 1s ease-in-out infinite;
   vertical-align: middle;
 }
 
 @keyframes blink {
-  0% {
+  0%, 100% {
     opacity: 1;
   }
-
   50% {
     opacity: 0;
   }
-
-  100% {
-    opacity: 1;
-  }
 }
+
 
 
 /* Assuming you have utility classes for colors and other properties from a framework like TailwindCSS */
@@ -1943,6 +1947,9 @@ Input{
 textarea{
   text-indent: 10px;
   font-weight:bolder ;
+}
+.indent{
+  text-indent: 50px;
 }
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;

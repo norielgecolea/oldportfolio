@@ -11,7 +11,7 @@ import meImage from '@/components/component/image/me.webp';
 import React, { useState, useEffect, CSSProperties, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Image from "next/image";
-
+import { FlipWords } from "@/components/ui/flip-words";
 
 
 interface CustomCSSProperties extends CSSProperties {
@@ -148,7 +148,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
   const handleRedirect = () => {
     router.push('/posss');
   };
-
+  const words = ["Frontend Developer", "Backend Developer", "Fullstack Developer", "Computer Engineer"];
   return (
 
 
@@ -177,22 +177,22 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   </div>
                 </div>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-1">
+                
+                  <h1 className="text-5xl font-bold  no-select"><p className="text-lg text-muted-foreground no-select">Hi, my name is </p>Noriel Gecolea <span className="cursor"></span></h1>
+                  <h3 className="text-1xl font-bold  no-select "><FlipWords words={words} />  <span className=""></span></h3>
+                
+                <p className="text-lg text-muted-foreground no-select py-10">
 
-                <h1 className="text-5xl font-bold  no-select"><p className="text-lg text-muted-foreground no-select">Hi, my name is </p>Noriel Fernando Gecolea <span className="cursor"></span></h1>
-                <p className="text-lg text-muted-foreground no-select">
 
-                  I am a graduating computer engineering student with a passion for programming and
+                     I am a graduating computer engineering student with a passion for programming and
                   building innovative, user-friendly applications. With experience in a
                   variety of technologies, I am always eager to expand my knowledge and
                   skills. Additionally, I enjoy music production and working on electronics
                   projects in my spare time.
-
-
-
-
-
                 </p>
+
+                <h2 className="text-2xl font-bold flex items-center justify-center "></h2>
                 <div className="flex gap-4">
                   <Link
                     href="#"
@@ -738,7 +738,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
               </div>
               <form className="space-y-4" action="https://api.web3forms.com/submit" method="POST">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <Input type="hidden" name="access_key" value="1fc4e8af-b7fb-4bd9-95c6-5bac74d5e7b0"/>
+                  <Input type="hidden" name="access_key" value="1fc4e8af-b7fb-4bd9-95c6-5bac74d5e7b0" />
                   <div>
                     <Label htmlFor="name">Name</Label>
                     <Input name="name" id="name" type="text" required />
@@ -752,7 +752,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   <Label htmlFor="message">Message</Label>
                   <Textarea name="message" id="message" rows={5} required />
                 </div>
-                
+                <Input type="hidden" name="redirect" value="https://www.norielgecolea.com" />
                 <Button type="submit" className="w-full">
                   Send Message
                 </Button>
