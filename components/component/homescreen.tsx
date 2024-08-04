@@ -180,9 +180,11 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
               <div className="space-y-1">
                 
                   <h1 className="text-5xl font-bold  no-select"><p className="text-lg text-muted-foreground no-select">Hi, my name is </p>Noriel Gecolea <span className="cursor"></span></h1>
+                  <div className="horizontal-line"></div>
                   <h3 className="text-1xl font-bold  no-select "><FlipWords words={words} />  <span className=""></span></h3>
-                
-                <p className="text-lg text-muted-foreground no-select py-10">
+                  
+
+                <p className="text-lg text-muted-foreground no-select py-5">
 
 
                      I am a graduating computer engineering student with a passion for programming and
@@ -202,13 +204,13 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     <DownloadIcon className="mr-2 h-4 w-4" />
                     Download CV
                   </Link>
-                  <Link
-                    href="/pos"
+                  <button
+                    onClick={() => setCurrentView('contact')}
                     className="inline-flex items-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-muted-foreground shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
-                    prefetch={false}
+                    
                   >
                     Contact Me
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>

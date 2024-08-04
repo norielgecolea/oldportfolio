@@ -976,3 +976,9 @@ textarea{
 .indent{
   text-indent: 50px;
 }
+.horizontal-line {
+  width: 100%;
+  height: 3px;
+  background-color: hsl(var(--background));
+  margin: 20px 0;
+}
