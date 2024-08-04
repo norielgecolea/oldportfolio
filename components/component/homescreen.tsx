@@ -736,21 +736,23 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   Feel free to reach out if you have any questions or would like to collaborate.
                 </p>
               </div>
-              <form className="space-y-4">
+              <form className="space-y-4" action="https://api.web3forms.com/submit" method="POST">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <Input type="hidden" name="access_key" value="1fc4e8af-b7fb-4bd9-95c6-5bac74d5e7b0"/>
                   <div>
                     <Label htmlFor="name">Name</Label>
-                    <Input id="name" type="text" required />
+                    <Input name="name" id="name" type="text" required />
                   </div>
                   <div>
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" required />
+                    <Input name="email" id="email" type="email" required />
                   </div>
                 </div>
                 <div>
                   <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" rows={5} required />
+                  <Textarea name="message" id="message" rows={5} required />
                 </div>
+                
                 <Button type="submit" className="w-full">
                   Send Message
                 </Button>

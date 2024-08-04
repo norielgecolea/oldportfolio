@@ -969,3 +969,11 @@ html {
       transform: translateY(-2000px);
   }
 }
+Input{
+  text-indent: 10px;
+  font-weight:bolder ;
+}
+textarea{
+  text-indent: 10px;
+  font-weight:bolder ;
+}
