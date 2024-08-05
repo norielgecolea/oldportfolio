@@ -641,8 +641,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   <h3 className="text-xl font-bold">Front-end</h3>
                   <ul className="space-y-1 text-muted-foreground">
                     <li>React</li>
-                    <li>Vue.js</li>
-                    <li>Angular</li>
+                    
                     <li>HTML/CSS/JavaScript</li>
                   </ul>
                 </div>
@@ -652,7 +651,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   <ul className="space-y-1 text-muted-foreground">
                     <li>Node.js</li>
                     <li>Python</li>
-                    <li>Ruby on Rails</li>
+                   
                     <li>PHP</li>
                   </ul>
                 </div>
@@ -662,7 +661,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   <ul className="space-y-1 text-muted-foreground">
                     <li>FireBase</li>
                     <li>MySQL</li>
-                    <li>SQLite</li>
+                  
                   </ul>
                 </div>
                 <div className="space-y-2">
@@ -671,8 +670,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   <ul className="space-y-1 text-muted-foreground">
                     <li>Arduino</li>
                     <li>VS</li>
-                    <li>AWS</li>
-                    <li>Figma</li>
+                   
                   </ul>
 
                 </div>
