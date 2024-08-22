@@ -23,12 +23,23 @@ function POSPage({ setCurrentView }: POSPageProps) {
   return (
     <div className="flex min-h-[100dvh] flex-col bg-background text-foreground">
 
+      <section id="projects" className="py-20 fade-in1 hiddenov wrapper">
+
+        <div className=" container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+
+          <div className="space-y-8">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold">This page is under construction.</h2>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
 
 
       <main className="flex-1">
-        
+
       </main>
       <footer className="bg-muted py-8">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
