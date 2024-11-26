@@ -196,14 +196,21 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
                 <h2 className="text-2xl font-bold flex items-center justify-center "></h2>
                 <div className="flex gap-4">
-                  <Link
-                    href="#"
-                    className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                    prefetch={false}
-                  >
-                    <DownloadIcon className="mr-2 h-4 w-4" />
-                    Download CV
-                  </Link>
+                <button
+  onClick={() => {
+    const link = document.createElement("a");
+    link.href = "/Resume_Noriel-Gecolea.pdf"; // Update with your file path
+    link.download = "Resume_Noriel-Gecolea.pdf"; // Optional: Specify the downloaded file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }}
+  className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+>
+  <DownloadIcon className="mr-2 h-4 w-4" />
+  Download Resume
+</button>
+
                   <button
                     onClick={() => setCurrentView('contact')}
                     className="inline-flex items-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-muted-foreground shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
