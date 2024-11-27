@@ -178,16 +178,16 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 </div>
               </div>
               <div className="space-y-1">
-                
-                  <h1 className="text-5xl font-bold  no-select"><p className="text-lg text-muted-foreground no-select">Hi, my name is </p>Noriel Gecolea <span className="cursor"></span></h1>
-                  <div className="horizontal-line"></div>
-                  <h3 className="text-1xl font-bold  no-select "><FlipWords words={words} />  <span className=""></span></h3>
-                  
+
+                <h1 className="text-5xl font-bold  no-select"><p className="text-lg text-muted-foreground no-select">Hi, my name is </p>Noriel Gecolea <span className="cursor"></span></h1>
+                <div className="horizontal-line"></div>
+                <h3 className="text-1xl font-bold  no-select "><FlipWords words={words} />  <span className=""></span></h3>
+
 
                 <p className="text-lg text-muted-foreground no-select py-5">
 
 
-                     I am a graduating computer engineering student with a passion for programming and
+                  I am a graduating computer engineering student with a passion for programming and
                   building innovative, user-friendly applications. With experience in a
                   variety of technologies, I am always eager to expand my knowledge and
                   skills. Additionally, I enjoy music production and working on electronics
@@ -196,25 +196,25 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
                 <h2 className="text-2xl font-bold flex items-center justify-center "></h2>
                 <div className="flex gap-4">
-                <button
-  onClick={() => {
-    const link = document.createElement("a");
-    link.href = "/Resume_Noriel-Gecolea.pdf"; // Update with your file path
-    link.download = "Resume_Noriel-Gecolea.pdf"; // Optional: Specify the downloaded file name
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }}
-  className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
->
-  <DownloadIcon className="mr-2 h-4 w-4" />
-  Download Resume
-</button>
+                  <button
+                    onClick={() => {
+                      const link = document.createElement("a");
+                      link.href = "/Resume_Noriel-Gecolea.pdf"; // Update with your file path
+                      link.download = "Resume_Noriel-Gecolea.pdf"; // Optional: Specify the downloaded file name
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                    className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  >
+                    <DownloadIcon className="mr-2 h-4 w-4" />
+                    Download my Curriculum Vitae
+                  </button>
 
                   <button
                     onClick={() => setCurrentView('contact')}
                     className="inline-flex items-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-muted-foreground shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
-                    
+
                   >
                     Contact Me
                   </button>
@@ -236,6 +236,32 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <p className="text-muted-foreground">Here are some of my recent projects.</p>
               </div>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <Card className=" no-select bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center">
@@ -455,6 +481,71 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
 
 
+                <Card className="bg-cardd no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center no-select">
+                    <Image
+                      src="/INVENTRACK.jpg"
+                      width={400}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover  py-5 no-select"
+                    />
+                  </CardHeader>
+
+
+                  <CardContent className="space-y-2">
+                    <h3 className="text-xl font-bold no-select">Inventrack</h3>
+                    <p className="text-muted-foreground no-select">
+                      INVENTRACK is an innovative IoT-based smart shelving system
+                      designed to streamline inventory management for businesses.
+                      Equipped with a combination of weight sensors and item counters,
+                      INVENTRACK provides real-time tracking of stock levels. The system
+                      monitors the quantity of items on each shelf, automatically
+                      detecting when stock levels are low based on both weight and item
+                      count.</p>
+                    <div className="flex gap-2 no-select">
+                      <Badge variant="secondary">ESP32</Badge>
+                      <Badge variant="secondary">SQL</Badge>
+                      <Badge variant="secondary">Html CSS JS</Badge>
+
+                    </div>
+                  </CardContent>
+                  <CardFooter className="mt-auto flex justify-end">
+                    <button onClick={() => setCurrentView('pos')}
+                      className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+
+                    >
+                      <ArrowRightIcon className="mr-2 h-4 w-4" />
+                      View Project
+                    </button>
+                  </CardFooter>
+                </Card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -648,7 +739,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   <h3 className="text-xl font-bold">Front-end</h3>
                   <ul className="space-y-1 text-muted-foreground">
                     <li>React</li>
-                    
+
                     <li>HTML/CSS/JavaScript</li>
                   </ul>
                 </div>
@@ -658,7 +749,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   <ul className="space-y-1 text-muted-foreground">
                     <li>Node.js</li>
                     <li>Python</li>
-                   
+
                     <li>PHP</li>
                   </ul>
                 </div>
@@ -668,7 +759,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   <ul className="space-y-1 text-muted-foreground">
                     <li>FireBase</li>
                     <li>MySQL</li>
-                  
+
                   </ul>
                 </div>
                 <div className="space-y-2">
@@ -677,7 +768,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   <ul className="space-y-1 text-muted-foreground">
                     <li>Arduino</li>
                     <li>VS</li>
-                   
+
                   </ul>
 
                 </div>
