@@ -62,18 +62,18 @@ function POSPage({ setCurrentView }: POSPageProps) {
 
           <h1 className="text-primary-foreground text-5xl font-bold text-center no-select fade-in-up">
 
-            I&aposll be back soon!<br /> </h1>
+            I&apos;ll be back soon!<br /> </h1>
 
 
 
           <h2 className="text-primary-foreground text-2xl text-center no-select"><br />
-            Sorry for the inconvenience but I&aposm performing some maintenance on this page at the moment. If you need to you can always  <button
+            Sorry for the inconvenience but I&apos;m performing some maintenance on this page at the moment. If you need to you can always  <button
               onClick={() => setCurrentView('contact')}
               className="font-bold  text-3xl text-primary contactmelink"
 
             >
               CONTACT ME
-            </button>, otherwise I&aposll be back online shortly!
+            </button>, otherwise I&apos;ll be back online shortly!
             <br /> -- Noriel Gecolea
 
           </h2>
