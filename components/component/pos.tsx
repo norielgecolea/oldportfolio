@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
-
+import Image from "next/image";
 interface POSPageProps {
 
   setCurrentView: (view: string) => void; // Add this to update view
@@ -16,25 +16,27 @@ function POSPage({ setCurrentView }: POSPageProps) {
   function scrolltop() {
     window.scrollTo(0, 0);
   }
-  const handleRedirect = () => {
-    router.push('/posss');
-  };
+
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-background text-foreground">
 
-      <section id="projects" className="py-20 fade-in1 hiddenov wrapper">
+      <section id="about" className=" py-20 fade-in  ">
+        <div className="space-y-1 ">
 
-        <div className=" container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+              <h1 className="text-primary-foreground text-5xl font-bold text-center no-select">
+              Apologies for the inconvenience,<br/> but this page is currently under construction.<br/>
+              Thank you for understanding, God bless!</h1>
+              
 
-          <div className="space-y-8">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold">This page is under construction.</h2>
+
+
+             
+
+           
+             
             </div>
-          </div>
-        </div>
       </section>
-
 
 
 
@@ -47,6 +49,11 @@ function POSPage({ setCurrentView }: POSPageProps) {
             <div className="flex items-center gap-2">
               <CodeIcon className="h-6 w-6" />
               <span className="font-bold">Noriel Fernando Gecolea</span>
+            </div>
+            <div className="circle-container  ">
+              <div className="">
+
+              </div>
             </div>
             <div className="flex items-center gap-4">
               <Link href="https://www.linkedin.com/in/norielgecolea/" className="text-muted-foreground hover:text-primary" prefetch={false}>

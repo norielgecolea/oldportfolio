@@ -511,7 +511,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                    <button onClick={() => setCurrentView('pos')}
+                    <button onClick={() => setCurrentView('inventrack')}
                       className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 
                     >
@@ -520,38 +520,6 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </button>
                   </CardFooter>
                 </Card>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                 <Card className="bg-cardd no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center no-select">

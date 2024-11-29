@@ -26,6 +26,8 @@
     --radius: 1rem;
     --navbar-background: 0 0% 100%; /* White */
     --navbar-foreground: 200 20% 20%; /* Dark text */
+    --dark: 0 2% 15%;
+
 
   }
 }
@@ -75,6 +77,15 @@ html {
   border-radius: 5px;
   background-color: hsl(var(--card)/0.7);
  
+}
+
+.image-radius{
+  border-radius: 8px;
+}
+
+.bg-dark{
+  background-color: hsl(var(--dark));
+  
 }
  
 @layer base {

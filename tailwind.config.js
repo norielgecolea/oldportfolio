@@ -16,6 +16,7 @@ export default {
         body: ['var(--font-body)', ...fontFamily.sans]
       },
       colors: {
+        
         border: 'hsl(var(--border))',
 
         input: 'hsl(var(--input))',
@@ -49,6 +50,10 @@ export default {
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
+        },
+        darkcard: {
+          DEFAULT: 'hsl(var(--dark))',
+          foreground: 'hsl(var(--muted-foreground))'
         },
       },
       borderRadius: {
