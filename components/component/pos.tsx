@@ -22,20 +22,75 @@ function POSPage({ setCurrentView }: POSPageProps) {
     <div className="flex min-h-[100dvh] flex-col bg-background text-foreground">
 
       <section id="about" className=" py-20 fade-in  ">
-        <div className="space-y-1 ">
-
-              <h1 className="text-primary-foreground text-5xl font-bold text-center no-select">
-              Apologies for the inconvenience,<br/> but this page is currently under construction.<br/>
-              Thank you for understanding, God bless!</h1>
-              
 
 
 
-             
 
-           
-             
-            </div>
+
+
+
+
+
+
+
+
+        <div className="flex items-center justify-center">
+        <Image
+            src='/maintenance3.png'
+            width={175}
+            height={175}
+            alt=""
+            className="h-auto w-auto object-cover fade-in-up"
+          />
+          <CodeIcon2 className="h-20 w-auto fade-in-up" />
+
+
+        </div>
+
+
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+
+
+
+
+
+
+
+
+
+
+
+          <h1 className="text-primary-foreground text-5xl font-bold text-center no-select fade-in-up">
+
+            I'll be back soon!<br /> </h1>
+
+
+
+          <h2 className="text-primary-foreground text-2xl text-center no-select"><br />
+            Sorry for the inconvenience but I'm performing some maintenance on this page at the moment. If you need to you can always  <button
+              onClick={() => setCurrentView('contact')}
+              className="font-bold  text-3xl text-primary contactmelink"
+
+            >
+              CONTACT ME
+            </button>, otherwise I'll be back online shortly!
+            <br /> -- Noriel Gecolea
+
+          </h2>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
       </section>
 
 
@@ -95,6 +150,27 @@ function CodeIcon(props: React.SVGProps<SVGSVGElement>) {
       strokeLinejoin="round"
     >
       <polyline points="16 18 22 12 16 6" />
+      <polyline points="8 6 2 12 8 18" />
+    </svg>
+  )
+}
+
+function CodeIcon2(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="150"
+      height="150"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polyline points="16 18 22 12 16 6" />
+
       <polyline points="8 6 2 12 8 18" />
     </svg>
   )

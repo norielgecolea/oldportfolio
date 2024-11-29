@@ -87,7 +87,14 @@ html {
   background-color: hsl(var(--dark));
   
 }
- 
+
+
+
+
+
+
+
+
 @layer base {
   * {
     @apply border-border;
@@ -997,3 +1004,8 @@ textarea{
   background-color: hsl(var(--background));
   margin: 20px 0;
 }
+.contactmelink:hover{
+  color: hsl(var(--muted-foreground));
+  animation: wiggle 1s ease-in-out infinite;
+  
+ }
