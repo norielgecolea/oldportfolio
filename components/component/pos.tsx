@@ -73,7 +73,7 @@ function POSPage({ setCurrentView }: POSPageProps) {
 
             >
               CONTACT ME
-            </button>, otherwise I'll be back online shortly!
+            </button>, otherwise I&aposll be back online shortly!
             <br /> -- Noriel Gecolea
 
           </h2>
