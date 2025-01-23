@@ -86,6 +86,7 @@ html {
 .bg-dark{
   background-color: hsl(var(--dark));
   
+  
 }
 
 
@@ -1009,3 +1010,9 @@ textarea{
   animation: wiggle 1s ease-in-out infinite;
   
  }
+
+
+
+
+
+

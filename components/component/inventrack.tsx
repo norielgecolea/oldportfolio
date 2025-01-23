@@ -21,10 +21,17 @@ function InventrackPage({ setCurrentView }: InventrackPageProps) {
   return (
     <div className="flex min-h-[100dvh] flex-col bg-background text-foreground">
 
-      <section id="about" className="bg-dark py-20 fade-in  ">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+
+
+      <section id="about" className=" py-20 fade-in  bg-dark">
+      
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+        
           <div className="grid grid-cols-1 gap-8 md:grid-cols-1">
+          
             <div className="flex items-center justify-center  emphasis-animation gap-8 md:grid-cols-1  ">
+            
               <Image
                 src="/inventrack/1.jpg"
                 width={400}
