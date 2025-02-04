@@ -168,7 +168,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <div className="circle-container  ">
                   <div className="">
                     <Image
-                      src='/me.png'
+                      src='/meformal.png'
                       width={300}
                       height={300}
                       alt=""
