@@ -27,8 +27,8 @@ export default function Home() {
         return <Homescreen currentView={currentView} setCurrentView={setCurrentView} />;
       case 'pos':
         return <POSPage setCurrentView={setCurrentView} />;
-        case 'inventrack':
-          return <InventrackPage setCurrentView={setCurrentView} />;
+      case 'inventrack':
+        return <InventrackPage setCurrentView={setCurrentView} />;
       default:
         return <Homescreen currentView={currentView} setCurrentView={setCurrentView} />;
     }
@@ -53,9 +53,17 @@ export default function Home() {
             <button onClick={() => setCurrentView('skills')} className="hover:text-primary">Skills and Certificates</button>
             <button onClick={() => setCurrentView('contact')} className="hover:text-primary">Contact</button>
           </nav>
-          <button className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 md:hidden">
+          <button onClick={() => { menubartoggle(); }} className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 md:hidden">
             Menu
           </button>
+        </div>
+        <div id="menubar" className="hidden transition-opacity">
+          <ul  className="text-2xl font-bold ml-3 ">
+            <li className="my-3"><button onClick={() => { menubarhide(); setCurrentView('about'); }} className="hover:text-primary">About</button></li>
+            <li className="my-3"> <button onClick={() =>{ menubarhide(); setCurrentView('projects');}} className="hover:text-primary">Projects</button></li>
+            <li className="my-3"><button onClick={() =>{ menubarhide(); setCurrentView('skills');}} className="hover:text-primary">Skills and Certificates</button></li>
+            <li className="my-3"><button onClick={() =>{ menubarhide(); setCurrentView('contact');}} className="hover:text-primary">Contact</button></li>
+          </ul>
         </div>
       </header>
 
@@ -65,7 +73,22 @@ export default function Home() {
     </div>
   );
 }
+function menubarhide(){
+  const element = document.getElementById("menubar");
+if (element) {
+  element.classList.add("hidden");
+}
 
+}
+
+function menubartoggle(){
+  const element = document.getElementById("menubar");
+if (element) {
+  element.classList.toggle("hidden");
+}
+
+
+}
 function CodeIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
