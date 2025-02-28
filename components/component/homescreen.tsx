@@ -264,13 +264,17 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
 
 
                 <Card className=" no-select bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
-                  <CardHeader className="flex items-center justify-center">
+                  <CardHeader className="flex items-center justify-center relative">
+                    {/* Placeholder background */}
+                    <div className="absolute w-[285px] h-[150px] inset-0 bg-gray-600 rounded-t-md rounded-b-md my-5 animate-pulse" />
+
                     <Image
-                      src="/POS.webp"
+                      src="/POS.png"
                       width={400}
                       height={225}
-                      alt="Project 1"
-                      className="rounded-t-md object-cover py-5 no-select"
+                      alt=""
+                      className="rounded-t-md object-cover py-5 no-select relative z-10"
+                      
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
@@ -299,12 +303,13 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 </Card>
                 <Card className=" no-select bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center ">
+                  <div className="absolute w-[285px] h-[150px] inset-0 bg-gray-600 rounded-t-md rounded-b-md my-8 mx-3 animate-pulse" />
                     <Image
                       src="/quicktrack.webp"
                       width={400}
                       height={225}
                       alt="Project 2"
-                      className="rounded-t-md object-cover py-5 no-select"
+                      className="rounded-t-md object-cover py-5 no-select z-10"
                     />
                   </CardHeader>
                   <CardContent className="space-y-2 ">
