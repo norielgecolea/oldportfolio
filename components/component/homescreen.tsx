@@ -199,8 +199,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   <button
                     onClick={() => {
                       const link = document.createElement("a");
-                      link.href = "/Resume_Noriel-Gecolea.pdf"; // Update with your file path
-                      link.download = "Resume_Noriel-Gecolea.pdf"; // Optional: Specify the downloaded file name
+                      link.href = "/Noriel Gecolea_CV.pdf"; // Update with your file path
+                      link.download = "Noriel Gecolea_CV.pdf"; // Optional: Specify the downloaded file name
                       document.body.appendChild(link);
                       link.click();
                       document.body.removeChild(link);
