@@ -266,7 +266,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <Card className=" no-select bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center relative">
                     {/* Placeholder background */}
-                    <div className="absolute w-[285px] h-[150px] inset-0 bg-gray-600 rounded-t-md rounded-b-md my-5 animate-pulse" />
+                    
 
                     <Image
                       src="/POS.png"
@@ -303,7 +303,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 </Card>
                 <Card className=" no-select bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center ">
-                  <div className="absolute w-[285px] h-[150px] inset-0 bg-gray-600 rounded-t-md rounded-b-md my-8 mx-3 animate-pulse" />
+                 
                     <Image
                       src="/quicktrack.webp"
                       width={400}
