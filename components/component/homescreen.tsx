@@ -225,9 +225,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
         </section>
 
         <section ref={projectRef} id="projects" className="py-20 fade-in1 hiddenov wrapper">
-          <div id="stars"></div>
-          <div id="stars2"></div>
-          <div id="stars3"></div>
+     
           <div className=" container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
 
             <div className="space-y-8">
@@ -473,9 +471,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </button>
                   </CardFooter>
                 </Card>
-                <div id="stars"></div>
-                <div id="stars2"></div>
-                <div id="stars3"></div>
+           
               </div>
 
 
