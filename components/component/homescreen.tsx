@@ -233,7 +233,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <h2 className="text-3xl font-bold">Featured Software Projects</h2>
                 <p className="text-muted-foreground">Here are some of my recent projects.</p>
               </div>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
 
 
@@ -479,7 +479,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <h2 className="text-3xl font-bold no-select">Featured Software and Hardware Projects</h2>
                 <p className="text-muted-foreground no-select">Here are some of my recent projects.</p>
               </div>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div className=" grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
 
                 <Card className="bg-cardd no-select flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
@@ -512,7 +512,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                    <button onClick={() => setCurrentView('inventrack')}
+                  <button onClick={() => setCurrentView('pos')}
                       className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 
                     >
