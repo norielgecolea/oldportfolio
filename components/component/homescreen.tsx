@@ -225,7 +225,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
         </section>
 
         <section ref={projectRef} id="projects" className="py-20 fade-in1 hiddenov wrapper">
-     
+
           <div className=" container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
 
             <div className="space-y-8">
@@ -264,7 +264,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <Card className=" no-select bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center relative">
                     {/* Placeholder background */}
-                    
+
 
                     <Image
                       src="/POS.png"
@@ -272,7 +272,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                       height={225}
                       alt=""
                       className="rounded-t-md object-cover py-5 no-select relative z-10"
-                      
+
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
@@ -301,7 +301,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 </Card>
                 <Card className=" no-select bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
                   <CardHeader className="flex items-center justify-center ">
-                 
+
                     <Image
                       src="/quicktrack.webp"
                       width={400}
@@ -471,7 +471,52 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </button>
                   </CardFooter>
                 </Card>
-           
+
+
+
+                <Card className="bg-cardd flex flex-col h-full transition-transform transform hover:scale-105 hover:shadow-lg">
+                  <CardHeader className="flex items-center justify-center">
+                    <Image
+                      src="/textsnip.jpg"
+                      width={400}
+                      height={225}
+                      alt="Project 1"
+                      className="rounded-t-md object-cover  py-5"
+                    />
+                  </CardHeader>
+                  <CardContent className="space-y-2">
+                    <h3 className="text-xl font-bold no-select">TextSnip</h3>
+                    <p className="text-muted-foreground no-select">
+                      TextSnip is a web-based application that allows users to upload images and instantly extract text using Optical Character Recognition (OCR).
+                      It offers a fast, intuitive solution for converting screenshots, scanned documents, and photos into editable text.
+                    </p>
+                    <div className="flex gap-2 no-select">
+                      <Badge variant="secondary">ReactJs</Badge>
+
+                      
+                    </div>
+                  </CardContent>
+                  <CardFooter className="mt-auto flex justify-end">
+
+
+                    
+
+
+
+                    <a href="http://textsnip.norielgecolea.com/"
+                      className="cursor-pointer inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+
+                    >
+                      <ArrowRightIcon className="mr-2 h-4 w-4" />
+                      View Project
+                    </a>
+                  </CardFooter>
+                </Card>
+
+
+
+
+
               </div>
 
 
@@ -512,7 +557,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                  <button onClick={() => setCurrentView('pos')}
+                    <button onClick={() => setCurrentView('pos')}
                       className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 
                     >
