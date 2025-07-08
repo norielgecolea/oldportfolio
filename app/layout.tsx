@@ -13,7 +13,7 @@ const fontHeading = Manrope({
 })
 export const metadata = {
   title: "Noriel Gecolea",
-  
+
 
 };
 const fontBody = Manrope({
@@ -26,19 +26,19 @@ interface LayoutProps {
 }
 export default function Layout({ children }: LayoutProps) {
   return (
-    <html lang="en">  
-    <Head>
+    <html lang="en">
+      <Head>
         <title>Noriel Gecolea</title>
         <meta name="google-adsense-account" content="ca-pub-3738297787059683"></meta>
       </Head>
-      <body 
+      <body
         className={cn(
           'antialiased',
           fontHeading.variable,
           fontBody.variable
         )}
       >
-     
+
         {children}
       </body>
     </html>
