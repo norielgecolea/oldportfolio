@@ -35,9 +35,16 @@ export default function Home() {
   }
   return (
 
+    
+
     <div className="flex min-h-[100dvh] flex-col bg-background/80 text-foreground">
       <Head>
         <title>Noriel Gecolea</title>
+         <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3738297787059683"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
       <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
