@@ -485,9 +485,9 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
-                    <h3 className="text-xl font-bold no-select">TextSnip</h3>
+                    <h3 className="text-xl font-bold no-select">Textract</h3>
                     <p className="text-muted-foreground no-select">
-                      TextSnip is a web-based application that allows users to upload images and instantly extract text using Optical Character Recognition (OCR).
+                      Textract is a web-based application that allows users to upload images and instantly extract text using Optical Character Recognition (OCR).
                       It offers a fast, intuitive solution for converting screenshots, scanned documents, and photos into editable text.
                     </p>
                     <div className="flex gap-2 no-select">
@@ -498,7 +498,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
 
-                    <a href="http://textsnip.norielgecolea.com/"
+                    <a href="https://textract.norielgecolea.com/"
                       className="cursor-pointer inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 
                     >
