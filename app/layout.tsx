@@ -29,6 +29,7 @@ export default function Layout({ children }: LayoutProps) {
     <html lang="en">  
     <Head>
         <title>Noriel Gecolea</title>
+        <meta name="google-adsense-account" content="ca-pub-3738297787059683"></meta>
       </Head>
       <body 
         className={cn(
