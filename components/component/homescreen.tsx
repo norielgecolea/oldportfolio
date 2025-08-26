@@ -187,7 +187,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                 <p className="text-lg text-muted-foreground no-select py-5">
 
 
-                  I am a graduating computer engineering student with a passion for programming and
+                  I am a computer engineer with a passion for programming and
                   building innovative, user-friendly applications. With experience in a
                   variety of technologies, I am always eager to expand my knowledge and
                   skills. Additionally, I enjoy music production and working on electronics
@@ -199,8 +199,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                   <button
                     onClick={() => {
                       const link = document.createElement("a");
-                      link.href = "/Noriel Gecolea_CV.pdf"; // Update with your file path
-                      link.download = "Noriel Gecolea_CV.pdf"; // Optional: Specify the downloaded file name
+                      link.href = "/NORIEL GECOLEA RESUME.pdf"; // Update with your file path
+                      link.download = "NORIEL GECOLEA RESUME.pdf"; // Optional: Specify the downloaded file name
                       document.body.appendChild(link);
                       link.click();
                       document.body.removeChild(link);
@@ -208,7 +208,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                   >
                     <DownloadIcon className="mr-2 h-4 w-4" />
-                    Download my Curriculum Vitae
+                    Download my Resume
                   </button>
 
                   <button
