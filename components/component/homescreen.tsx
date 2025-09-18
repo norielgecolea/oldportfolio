@@ -99,6 +99,8 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
   };
 
   const cardData = [
+    { src: "/certs/ccna.png", title: "CCNA: Introduction to Networking" },
+    { src: "/certs/safetyofficer.png", title: "Safety Officer 2" },
     { src: "/certs/Coursera Bulding a Calculator-1.webp", title: "Building a Calculator" },
     { src: "/certs/csnet.webp", title: "C# for .NET Developers" },
     { src: "/certs/Coursera C++ Data Structures-1.webp", title: "C++ Data Structures" },
