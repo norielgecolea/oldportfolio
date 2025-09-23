@@ -359,13 +359,13 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="mt-auto flex justify-end">
-                    <button onClick={() => setCurrentView('pos')}
-                      className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    <a href="https://lspureqportal.norielgecolea.com/"
+                      className="cursor-pointer inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 
                     >
                       <ArrowRightIcon className="mr-2 h-4 w-4" />
                       View Project
-                    </button>
+                    </a>
 
                   </CardFooter>
                 </Card>
