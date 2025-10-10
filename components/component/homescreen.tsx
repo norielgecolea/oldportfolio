@@ -181,7 +181,7 @@ function Homescreen({ currentView, setCurrentView }: HomescreenProps) {
               </div>
               <div className="space-y-1">
 
-                <h1 className="text-5xl font-bold  no-select"><p className="text-lg text-muted-foreground no-select">Hi, my name is </p>Noriel Gecolea, CPE, SO2 <span className="cursor"></span></h1>
+                <h1 className="text-4xl font-bold  no-select"><p className="text-lg text-muted-foreground no-select">Hi, my name is </p>Noriel Gecolea, CPE, SO2 <span className="cursor"></span></h1>
                 <div className="horizontal-line"></div>
                 <h3 className="text-1xl font-bold  no-select "><FlipWords words={words} />  <span className=""></span></h3>
 
