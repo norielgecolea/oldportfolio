@@ -1,36 +1,53 @@
-// This is the root layout component for your Next.js app.
-// Learn more: https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required
+// app/layout.tsx
+import './globals.css'
 import { Manrope } from 'next/font/google'
 import { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
-import './globals.css'
-import Head from 'next/head'
+import Script from 'next/script'
 
 const fontHeading = Manrope({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-heading',
 })
-export const metadata = {
-  title: "Noriel Gecolea",
 
-
-};
 const fontBody = Manrope({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-body',
 })
+
+export const metadata = {
+  title: 'Noriel Gecolea',
+  description: 'Personal portfolio of Noriel Gecolea',
+  other: {
+    'google-adsense-account': 'ca-pub-3738297787059683',
+  },
+}
+
 interface LayoutProps {
   children: ReactNode
 }
-export default function Layout({ children }: LayoutProps) {
+
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <Head>
-        <title>Noriel Gecolea</title>
-        <meta name="google-adsense-account" content="ca-pub-3738297787059683"></meta>
-      </Head>
+      <head>
+        {/* Google Tag Manager / Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-DCYQY8NRNP"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DCYQY8NRNP');
+          `}
+        </Script>
+      </head>
       <body
         className={cn(
           'antialiased',
@@ -38,7 +55,6 @@ export default function Layout({ children }: LayoutProps) {
           fontBody.variable
         )}
       >
-
         {children}
       </body>
     </html>
